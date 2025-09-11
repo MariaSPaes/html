@@ -1,0 +1,30 @@
+
+/*HEADER*/
+header {
+    background-color: #1d0f6e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 70px;
+}
+
+/*RESET*/
+
+ * { margin: 0;
+        padding: 0;
+        border: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+/*MAIN*/
+
+.aviao {
+    background-image: url(aviao.jpg);
+    background-repeat: no-repeat;
+    height: 3000    px;
+}
+
+
+/*FOOTER*/
