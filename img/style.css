@@ -1,0 +1,97 @@
+
+/*HEADER*/
+header {
+    background-color: #1d0f6e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 70px;
+}
+
+/*RESET*/
+
+ * { margin: 0;
+        padding: 0;
+        border: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+/*MAIN*/
+
+.aviao { /*section*/
+    background-image: url(aviao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 750px;
+     
+    /*Confi. Texto Centro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aviao h2 {
+    color: white;
+    font-size: 90px;
+    width: 1000px;
+    text-align: center;
+    font-weight: 500;
+
+
+}
+
+.pacote img {
+    width: 400px;
+    height: 600px;
+     border-radius: 20px;
+  
+   
+}
+
+.pacote {
+    border: 3px solid black;
+    /*expessura da borda, tipo da borda e cor*/
+      border-radius: 20px;
+      text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.pacote p {
+    font-size: 32px;
+}
+
+.pacote span {
+    font-size: 20px;
+}
+
+.titulo {
+    color: #1d0f6e;
+    font-size: 90px;
+    text-align: center;
+    font-weight: 500;
+    margin: 60px 0;
+
+}
+
+footer {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d0f6e;
+    color: white;
+    height: 200px;
+    font-size: 40px;
+}
+
+/*FOOTER*/
