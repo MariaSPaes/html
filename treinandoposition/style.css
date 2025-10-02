@@ -1,0 +1,57 @@
+   h1 {
+    position: fixed; /*Position padrão*/
+    font-size: 40px;
+    left: 45%;
+    background-color: rgb(155, 252, 242);
+    border-radius: 15px;
+    font-family: cursive;
+    padding: 15px;
+    font-weight: 100;
+    box-shadow: 10px 10px 5px rgb(211, 211, 211);
+    }
+
+    p {
+    padding: 120px;
+    font-size: 30px;
+    }
+
+    div {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+.caixa1{
+    background-color: rgb(255, 222, 32);
+    position: relative; 
+    top: 50px;
+    left: 1300px;
+    z-index: -1;
+    justify-content: center;
+    box-shadow: 10px 10px 5px rgb(211, 211, 211);
+    border-radius: 13px;
+}
+.caixa2{
+    background-color: rgb(255, 138, 193);
+    position: relative;
+    left: 300px;
+    box-shadow: 10px 10px 5px rgb(211, 211, 211);
+    border-radius: 13px;
+}
+
+.caixa3{
+    background-color: rgb(109, 16, 145);
+    position: absolute;
+    bottom: 150px;
+    right: 20px;
+    box-shadow: 10px 10px 5px rgb(211, 211, 211);
+    border-radius: 13px;
+}
+body{
+    height: 200vh; /*vh e vw*/
+}
+.caixa1 {
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    
+}
