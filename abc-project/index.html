@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYNET - Conectando Talentos do ABC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="images/skynet-logo-recolored.png" alt="Skynet Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active" data-page="inicio">INÍCIO</a></li>
+                    <li><a href="#meu-perfil" class="nav-link" data-page="meu-perfil">MEU PERFIL</a></li>
+                    <li><a href="#vagas" class="nav-link" data-page="vagas">VAGAS</a></li>
+                    <li><a href="#tutoriais" class="nav-link" data-page="tutoriais">TUTORIAIS</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="accessibility-btn" data-action="toggle-accessibility" aria-label="Menu de Acessibilidade" aria-expanded="false" aria-controls="accessibility-menu">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Abrir Menu Principal">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Accessibility Menu -->
+    <div class="accessibility-menu" id="accessibility-menu" role="region" aria-label="Menu de Opções de Acessibilidade">
+        <div class="accessibility-content">
+            <h3>Recursos de Acessibilidade</h3>
+            <button class="accessibility-option" id="high-contrast-toggle">
+                <i class="fas fa-adjust"></i>
+                Alto Contraste
+            </button>
+            <button class="accessibility-option" id="font-size-increase">
+                <i class="fas fa-plus"></i>
+                Aumentar Fonte
+            </button>
+            <button class="accessibility-option" id="font-size-decrease">
+                <i class="fas fa-minus"></i>
+                Diminuir Fonte
+            </button>
+            <button class="accessibility-option" id="vlibras-toggle">
+                <i class="fas fa-sign-language"></i>
+                VLibras (LIBRAS)
+            </button>
+            <button class="accessibility-option" id="screen-reader-toggle">
+                <i class="fas fa-volume-up"></i>
+                Leitor de Tela
+            </button>
+        </div>
+    </div>
+
+    <!-- LGPD Consent Banner -->
+    <div class="lgpd-banner" id="lgpd-banner" style="display: none;">
+        <div class="lgpd-content">
+            <div class="lgpd-text">
+                <h4><i class="fas fa-shield-alt"></i> Proteção de Dados</h4>
+                <p>Utilizamos cookies e coletamos dados pessoais para melhorar sua experiência. Seus dados são protegidos conforme a LGPD. <a href="#" onclick="showPrivacyPolicy()">Saiba mais sobre nossa Política de Privacidade</a>.</p>
+            </div>
+            <div class="lgpd-actions">
+                <button class="btn-lgpd-accept" onclick="acceptLGPD()">Aceitar</button>
+                <button class="btn-lgpd-customize" onclick="customizeLGPD()">Personalizar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Página Inicial -->
+        <section id="inicio" class="page active">
+            <div class="hero-section">
+                <div class="hero-background">
+                    <img src="images/hero-background.jpg" alt="Pessoas trabalhando em equipe" class="hero-bg-img">
+                </div>
+                <div class="hero-content">
+                    <div class="hero-title-container">
+                        <h1 class="hero-title">SKYNET</h1>
+                        <p class="hero-subtitle">Conectando talentos, impulsionando um futuro sustentável.</p>
+                    </div>
+                    
+                    <div class="hero-description">
+                        <h2>EMPREGOS DO FUTURO, COM PROPÓSITO NO PRESENTE.</h2>
+                        <div class="chat-ia-indicator">
+                            <div class="chat-icon"></div>
+                            <span>Assistente de IA disponível</span>
+                        </div>
+                        <p>Utilizamos Inteligência Artificial para otimizar a conexão entre suas competências e o mercado de trabalho, impulsionando seu desenvolvimento e carreira.</p>
+                    </div>
+                    
+                    <div class="hero-options">
+                        <div class="option-card candidate-card">
+                            <h3>PROCURANDO</h3>
+                            <h2>EMPREGO?</h2>
+                            <p>Veja oportunidades disponíveis clicando no botão abaixo!</p>
+                            <button class="btn-primary" data-action="create-candidate-profile">
+                                <span>Criar Perfil</span>
+                                <i class="fas fa-user-plus"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="option-card employer-card">
+                            <h3>PROCURANDO</h3>
+                            <h2>FUNCIONÁRIOS?</h2>
+                            <p>Cadastre as vagas disponíveis na sua empresa e encontre profissionais qualificados para o seu time.</p>
+                            <button class="btn-primary" data-action="create-employer-profile">
+                                <span>Criar Perfil Empresarial</span>
+                                <i class="fas fa-building"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Meu Perfil -->
+        <section id="meu-perfil" class="page">
+            <div class="page-content">
+                <!-- Seção de Seleção de Tipo (inicial) -->
+                <div id="profile-selection" class="profile-selection-container">
+                    <div class="page-header">
+                        <h2 class="page-title">MEU PERFIL</h2>
+                        <p class="page-subtitle">Escolha o tipo de perfil que deseja criar</p>
+                    </div>
+                    
+                    <div class="profile-type-selection">
+                        <div class="profile-type-card" data-action="select-profile-type" data-type="funcionario">
+                            <div class="profile-type-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Sou Funcionário</h3>
+                            <p>Busco oportunidades de emprego na região do ABC Paulista</p>
+                            <button class="btn-select-type">Selecionar</button>
+                        </div>
+                        
+                        <div class="profile-type-card" data-action="select-profile-type" data-type="empregador">
+                            <div class="profile-type-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Sou Empregador</h3>
+                            <p>Quero cadastrar vagas e encontrar profissionais qualificados</p>
+                            <button class="btn-select-type">Selecionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Perfil Personalizado (após preenchimento) -->
+                <div id="profile-dashboard" class="profile-dashboard-container" style="display: none;">
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="profile-details">
+                                <h2 id="profile-name">Nome do Usuário</h2>
+                                <p id="profile-type-label">Funcionário</p>
+                                <p id="profile-location">Cidade, Estado</p>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn-edit-profile" data-action="edit-profile">
+                                <i class="fas fa-edit"></i>
+                                Editar Perfil
+                            </button>
+                            <button class="btn-logout" data-action="logout-profile">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Sair / Trocar Perfil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard do Funcionário -->
+                    <div id="funcionario-dashboard" class="dashboard-content" style="display: none;">
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Vagas Compatíveis</h4>
+                                    <span class="stat-number" id="vagas-compativeis-count">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Compatibilidade Média</h4>
+                                    <span class="stat-number" id="compatibilidade-media">0%</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Cursos Recomendados</h4>
+                                    <span class="stat-number" id="cursos-recomendados-count">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sections">
+                            <div class="dashboard-section">
+                                <h3>Suas Competências</h3>
+                                <div id="user-skills" class="skills-display">
+                                    <!-- Competências serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Empresas Compatíveis</h3>
+                                <div id="empresas-compativeis" class="empresas-list">
+                                    <!-- Empresas compatíveis serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Próximos Passos</h3>
+                                <div class="next-steps">
+                                    <div class="step-item">
+                                        <i class="fas fa-search"></i>
+                                        <span>Explore vagas compatíveis com seu perfil</span>
+                                        <button class="btn-step" data-action="go-to-vagas">Ver Vagas</button>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>Aprimore suas competências com cursos online gratuitos</span>
+                                        <button class="btn-step" data-action="open-chat-courses">Ver Cursos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard do Empregador -->
+                    <div id="empregador-dashboard" class="dashboard-content" style="display: none;">
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Candidatos Sugeridos</h4>
+                                    <span class="stat-number" id="candidatos-sugeridos-count">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Vagas Ativas</h4>
+                                    <span class="stat-number" id="vagas-ativas-count">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Matches Realizados</h4>
+                                    <span class="stat-number" id="matches-realizados-count">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sections">
+                            <div class="dashboard-section">
+                                <h3>Informações da Empresa</h3>
+                                <div id="company-info" class="company-display">
+                                    <!-- Informações da empresa serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Candidatos Compatíveis</h3>
+                                <div id="candidatos-compativeis" class="candidatos-list">
+                                    <!-- Candidatos compatíveis serão carregados dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Ações Rápidas</h3>
+                                <div class="quick-actions">
+                                    <div class="action-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Ver candidatos sugeridos para suas vagas</span>
+                                        <button class="btn-action" data-action="go-to-candidates">Ver Candidatos</button>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <span>Cadastrar nova vaga na plataforma</span>
+                                        <button class="btn-action" data-action="create-job">Cadastrar Vaga</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Perfil do Candidato -->
+        <section id="perfil-candidato" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <h2 class="page-title">PERFIL DO CANDIDATO</h2>
+                    <p class="page-subtitle">Preencha com suas informações para que a nossa IA possa buscar melhores oportunidades para o seu perfil</p>
+                    <div class="lgpd-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Seus dados são protegidos conforme a LGPD. Coletamos apenas informações necessárias para conectá-lo às melhores oportunidades.</span>
+                    </div>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-form">
+                        <div class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>SUAS INFORMAÇÕES:</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo <span class="required">*</span></label>
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado <span class="required">*</span></label>
+                            <select id="estado" required>
+                                <option value="">Selecione um Estado</option>
+                                <option value="SP" selected>São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="BA">Bahia</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="CE">Ceará</option>
+                                <option value="PA">Pará</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="RR">Roraima</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PI">Piauí</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="DF">Distrito Federal</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cidade">Cidade <span class="required">*</span></label>
+                            <select id="cidade" required>
+                                <option value="">Selecione uma cidade</option>
+                                <option value="santo-andre">Santo André</option>
+                                <option value="sao-bernardo">São Bernardo do Campo</option>
+                                <option value="sao-caetano">São Caetano do Sul</option>
+                                <option value="diadema">Diadema</option>
+                                <option value="maua">Mauá</option>
+                                <option value="ribeirao-pires">Ribeirão Pires</option>
+                                <option value="rio-grande-serra">Rio Grande da Serra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="escolaridade">Escolaridade <span class="required">*</span></label>
+                            <select id="escolaridade" required>
+                                <option value="">Selecione sua escolaridade</option>
+                                <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+                                <option value="fundamental-completo">Ensino Fundamental Completo</option>
+                                <option value="medio-incompleto">Ensino Médio Incompleto</option>
+                                <option value="medio-completo">Ensino Médio Completo</option>
+                                <option value="tecnico">Curso Técnico</option>
+                                <option value="superior-incompleto">Ensino Superior Incompleto</option>
+                                <option value="superior-completo">Ensino Superior Completo</option>
+                                <option value="pos-graduacao">Pós-graduação</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="area-interesse">Área de interesse <span class="required">*</span></label>
+                            <select id="area-interesse" required>
+                                <option value="">Selecione uma área</option>
+                                <option value="producao">Produção</option>
+                                <option value="manutencao">Manutenção</option>
+                                <option value="logistica">Logística</option>
+                                <option value="qualidade">Qualidade</option>
+                                <option value="seguranca">Segurança</option>
+                                <option value="administrativa">Administrativa</option>
+                                <option value="vendas">Vendas</option>
+                                <option value="recursos-humanos">Recursos Humanos</option>
+                                <option value="financeiro">Financeiro</option>
+                                <option value="ti">Tecnologia da Informação</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experiencia">Experiência profissional</label>
+                            <textarea id="experiencia" placeholder="Descreva sua experiência profissional, cargos anteriores, principais atividades..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cursos">Cursos e certificações</label>
+                            <textarea id="cursos" placeholder="Liste seus cursos, certificações, treinamentos..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="habilidades">Habilidades e competências</label>
+                            <textarea id="habilidades" placeholder="Ex: Trabalho em equipe, Liderança, Conhecimento em Excel, Soldagem..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="disponibilidade">Disponibilidade</label>
+                            <select id="disponibilidade">
+                                <option value="">Selecione sua disponibilidade</option>
+                                <option value="integral">Tempo integral</option>
+                                <option value="meio-periodo">Meio período</option>
+                                <option value="turnos">Disponível para turnos</option>
+                                <option value="flexivel">Horário flexível</option>
+                            </select>
+                        </div>
+                        
+                        <div class="consent-section">
+                            <div class="consent-item">
+                                <input type="checkbox" id="consent-data" required>
+                                <label for="consent-data">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Autorizo o uso dos meus dados para conectar-me a oportunidades de emprego, conforme a LGPD
+                                </label>
+                            </div>
+                            <div class="consent-item">
+                                <input type="checkbox" id="consent-contact">
+                                <label for="consent-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    Aceito receber contatos de empresas interessadas no meu perfil
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-continue" data-action="save-candidate-profile">
+                            <i class="fas fa-save"></i>
+                            Salvar Perfil
+                        </button>
+                    </div>
+                    
+                    <div class="profile-sidebar">
+                        <div class="profile-indicator">
+                            <h4>PERFIL DO CANDIDATO</h4>
+                        </div>
+                        
+                        <div class="abc-note">
+                            <p><em>*Candidatos da região do ABC Paulista têm prioridade na plataforma*</em></p>
+                        </div>
+                        
+                        <div class="privacy-note">
+                            <h5><i class="fas fa-lock"></i> Seus dados estão seguros</h5>
+                            <p>Utilizamos criptografia e seguimos rigorosamente a LGPD para proteger suas informações pessoais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Perfil do Empregador -->
+        <section id="perfil-empregador" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <h2 class="page-title">PERFIL DO EMPREGADOR</h2>
+                    <p class="page-subtitle">Cadastre sua empresa para encontrar os melhores profissionais</p>
+                    <div class="lgpd-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Dados da empresa protegidos conforme LGPD. Coletamos apenas informações necessárias para conectá-la aos melhores candidatos.</span>
+                    </div>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-form">
+                        <div class="profile-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>INFORMAÇÕES DA EMPRESA:</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome-empresa">Nome da empresa <span class="required">*</span></label>
+                            <input type="text" id="nome-empresa" placeholder="Nome da sua empresa" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ <span class="required">*</span></label>
+                            <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="setor-empresa">Setor de atuação <span class="required">*</span></label>
+                            <select id="setor-empresa" required>
+                                <option value="">Selecione o setor</option>
+                                <option value="automotiva">Automotiva</option>
+                                <option value="petroquimica">Petroquímica</option>
+                                <option value="metalurgica">Metalúrgica</option>
+                                <option value="construcao">Construção Civil</option>
+                                <option value="logistica">Logística</option>
+                                <option value="alimenticia">Alimentícia</option>
+                                <option value="farmaceutica">Farmacêutica</option>
+                                <option value="textil">Têxtil</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="servicos">Serviços</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="porte-empresa">Porte da empresa <span class="required">*</span></label>
+                            <select id="porte-empresa" required>
+                                <option value="">Selecione o porte</option>
+                                <option value="micro">Microempresa (até 9 funcionários)</option>
+                                <option value="pequena">Pequena empresa (10 a 49 funcionários)</option>
+                                <option value="media">Média empresa (50 a 249 funcionários)</option>
+                                <option value="grande">Grande empresa (250+ funcionários)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cidade-empresa">Cidade <span class="required">*</span></label>
+                            <select id="cidade-empresa" required>
+                                <option value="">Selecione a cidade</option>
+                                <option value="santo-andre">Santo André</option>
+                                <option value="sao-bernardo">São Bernardo do Campo</option>
+                                <option value="sao-caetano">São Caetano do Sul</option>
+                                <option value="diadema">Diadema</option>
+                                <option value="maua">Mauá</option>
+                                <option value="ribeirao-pires">Ribeirão Pires</option>
+                                <option value="rio-grande-serra">Rio Grande da Serra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="descricao-empresa">Descrição da empresa</label>
+                            <textarea id="descricao-empresa" placeholder="Descreva sua empresa, principais atividades, missão, valores..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="areas-contratacao">Áreas que mais contratam</label>
+                            <textarea id="areas-contratacao" placeholder="Ex: Produção, Manutenção, Logística, Qualidade..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="beneficios">Benefícios oferecidos</label>
+                            <textarea id="beneficios" placeholder="Ex: Vale alimentação, Plano de saúde, Vale transporte, Participação nos lucros..."></textarea>
+                        </div>
+                        
+                        <div class="consent-section">
+                            <div class="consent-item">
+                                <input type="checkbox" id="consent-empresa-data" required>
+                                <label for="consent-empresa-data">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Autorizo o uso dos dados da empresa para conectar-nos aos melhores candidatos, conforme a LGPD
+                                </label>
+                            </div>
+                            <div class="consent-item">
+                                <input type="checkbox" id="consent-empresa-contact">
+                                <label for="consent-empresa-contact">
+                                    <i class="fas fa-users"></i>
+                                    Aceito receber sugestões de candidatos compatíveis com nossas vagas
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-continue" data-action="save-employer-profile">
+                            <i class="fas fa-save"></i>
+                            Salvar Perfil da Empresa
+                        </button>
+                    </div>
+                    
+                    <div class="profile-sidebar">
+                        <div class="profile-indicator">
+                            <h4>PERFIL DO EMPREGADOR</h4>
+                        </div>
+                        
+                        <div class="abc-note">
+                            <p><em>*Empresas do ABC Paulista têm prioridade na plataforma*</em></p>
+                        </div>
+                        
+                        <div class="privacy-note">
+                            <h5><i class="fas fa-lock"></i> Dados da empresa seguros</h5>
+                            <p>Protegemos as informações da sua empresa com criptografia e conformidade total com a LGPD.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Vagas (Candidato) -->
+        <section id="vagas" class="page">
+            <div class="page-content">
+                <div class="vagas-container">
+                    <div class="vagas-section">
+                        <h3>Vagas compatíveis com você</h3>
+                        <div id="vagas-compativeis" class="vagas-list">
+                            <!-- Vagas serão carregadas dinamicamente -->
+                        </div>
+                    </div>
+                    
+                    <div class="vagas-sidebar">
+                        <div class="profile-indicator">
+                            <h4>SEU PERFIL</h4>
+                            <div id="user-profile-summary">
+                                <!-- Resumo do perfil será carregado dinamicamente -->
+                            </div>
+                        </div>
+                        
+                        <div class="courses-recommendation">
+                            <h4>CURSOS RECOMENDADOS</h4>
+                            <p>Cursos online gratuitos do SENAI para melhorar seu perfil:</p>
+                            <div id="recommended-courses">
+                                <!-- Cursos recomendados serão carregados dinamicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Tutoriais -->
+        <section id="tutoriais" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <h2 class="page-title">TUTORIAIS</h2>
+                    <p class="page-subtitle">Clique nos blocos abaixo para que a BIA te ensine passo a passo</p>
+                </div>
+                
+                <!-- Tutorial Cards -->
+                <div class="tutorial-grid">
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="como-criar-perfil">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3>Como criar seu perfil</h3>
+                        <p>A BIA vai te ensinar a preencher seu perfil de forma completa para aumentar suas chances de ser encontrado por empresas.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                    
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="como-usar-plataforma">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Como usar a plataforma</h3>
+                        <p>Descubra todas as funcionalidades do SKYNET e aprenda a navegar pela plataforma com a ajuda da BIA.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                    
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="dicas-entrevista">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Dicas para entrevistas</h3>
+                        <p>A BIA vai te preparar para entrevistas de emprego com dicas práticas e específicas para o mercado do ABC.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                    
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="cursos-gratuitos">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Cursos gratuitos disponíveis</h3>
+                        <p>Conheça todos os cursos online gratuitos do SENAI com a BIA e receba recomendações personalizadas para seu perfil.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                    
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="encontrar-vagas">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Como encontrar vagas</h3>
+                        <p>A BIA vai te mostrar como usar o sistema de compatibilidade para encontrar as melhores oportunidades de emprego.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                    
+                    <div class="tutorial-card" data-action="open-chat-tutorial" data-tutorial="melhorar-perfil">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Como melhorar seu perfil</h3>
+                        <p>Receba dicas personalizadas da BIA sobre como tornar seu perfil mais atrativo para as empresas do ABC.</p>
+                        <div class="tutorial-duration">
+                            <i class="fas fa-robot"></i>
+                            <span>Tutorial com BIA</span>
+                        </div>
+                        <button class="btn-tutorial">
+                            <i class="fas fa-comments"></i>
+                            Conversar com BIA
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- FAQ Rápido -->
+                <div class="faq-section">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>O SKYNET é gratuito?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! O SKYNET é completamente gratuito para candidatos. Empresas têm acesso básico gratuito e opções premium para maior visibilidade.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Como a BIA me ajuda?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A BIA analisa seu perfil e oferece recomendações personalizadas de vagas, cursos online gratuitos e dicas de carreira específicas para o mercado do ABC Paulista.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Todos os cursos são online e gratuitos?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! Recomendamos apenas cursos online gratuitos do SENAI para que você possa estudar sem custos de transporte ou mensalidades.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Meus dados estão seguros?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutamente! Seguimos rigorosamente a LGPD. Seus dados são criptografados e nunca compartilhados sem sua autorização expressa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chat IA (BIA) -->
+    <div class="chat-container">
+        <button class="chat-toggle" id="chat-toggle" aria-label="Abrir Chat BIA - Mentora de Carreira">
+            <i class="fas fa-robot"></i>
+        </button>
+        
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <h3>BIA - Mentora de Carreira</h3>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot-message">
+                    <div class="message-content">
+                        <p>Olá! Sou a BIA, sua mentora de carreira do ABC Paulista.</p>
+                        <p>Estou aqui para te ajudar a encontrar emprego na região e recomendar cursos online gratuitos. Como posso te ajudar hoje?</p>
+                    </div>
+                </div>
+                
+                <div class="quick-questions">
+                    <button class="quick-btn" onclick="sendQuickMessage('Quais vagas têm no ABC agora?')">
+                        Vagas disponíveis no ABC
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Cursos online gratuitos do SENAI')">
+                        Cursos gratuitos SENAI
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Dicas para entrevista')">
+                        Dicas de entrevista
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Digite sua mensagem...">
+                <button class="chat-send" id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacy-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-alt"></i> Política de Privacidade - LGPD</h3>
+                <button class="modal-close" onclick="closePrivacyModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Proteção dos seus dados</h4>
+                <p>O SKYNET está comprometido com a proteção da sua privacidade e segurança dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
+                
+                <h4>Dados coletados</h4>
+                <ul>
+                    <li>Informações de perfil profissional (nome, cidade, experiência, habilidades)</li>
+                    <li>Dados de navegação para melhorar a experiência</li>
+                    <li>Informações de contato para conectá-lo a oportunidades</li>
+                </ul>
+                
+                <h4>Como usamos seus dados</h4>
+                <ul>
+                    <li>Conectar você a vagas compatíveis com seu perfil</li>
+                    <li>Recomendar cursos online gratuitos personalizados</li>
+                    <li>Melhorar nossos algoritmos de compatibilidade</li>
+                    <li>Enviar notificações sobre oportunidades relevantes</li>
+                </ul>
+                
+                <h4>Seus direitos</h4>
+                <p>Você tem direito a acessar, corrigir, excluir ou portar seus dados a qualquer momento. Entre em contato conosco para exercer esses direitos.</p>
+                
+                <h4>Segurança</h4>
+                <p>Utilizamos criptografia e medidas de segurança avançadas para proteger seus dados contra acesso não autorizado.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-modal-close" onclick="closePrivacyModal()">Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/empresas-cursos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/employer.js"></script>
+    
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-widget"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
