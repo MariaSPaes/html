@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYNET - Conectando Talentos do ABC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="images/skynet-logo-recolored.png" alt="Skynet Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active" data-page="inicio">INÍCIO</a></li>
+                    <li><a href="#meu-perfil" class="nav-link" data-page="meu-perfil">MEU PERFIL</a></li>
+                    <li><a href="#vagas" class="nav-link" data-page="vagas">VAGAS</a></li>
+                    <li><a href="#tutoriais" class="nav-link" data-page="tutoriais">TUTORIAIS</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="accessibility-btn" data-action="toggle-accessibility" aria-label="Menu de Acessibilidade" aria-expanded="false" aria-controls="accessibility-menu">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Abrir Menu Principal">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Accessibility Menu -->
+    <div class="accessibility-menu" id="accessibility-menu" role="region" aria-label="Menu de Opções de Acessibilidade">
+        <div class="accessibility-content">
+            <h3>Recursos de Acessibilidade</h3>
+            <button class="accessibility-option" id="high-contrast-toggle">
+                <i class="fas fa-adjust"></i>
+                Alto Contraste
+            </button>
+            <button class="accessibility-option" id="font-size-increase">
+                <i class="fas fa-plus"></i>
+                Aumentar Fonte
+            </button>
+            <button class="accessibility-option" id="font-size-decrease">
+                <i class="fas fa-minus"></i>
+                Diminuir Fonte
+            </button>
+            <button class="accessibility-option" id="vlibras-toggle">
+                <i class="fas fa-sign-language"></i>
+                VLibras (LIBRAS)
+            </button>
+            <button class="accessibility-option" id="screen-reader-toggle">
+                <i class="fas fa-volume-up"></i>
+                Leitor de Tela
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Página Inicial -->
+        <section id="inicio" class="page active">
+            <div class="hero-section">
+                <div class="hero-background">
+                    <img src="images/Integracao-scaled.jpg" alt="Pessoas trabalhando em equipe" class="hero-bg-img">
+                </div>
+                <div class="hero-content">
+                    <div class="hero-title-container">
+                        <h1 class="hero-title">SKYNET</h1>
+                        <p class="hero-subtitle">Conectando talentos, impulsionando um futuro sustentável.</p>
+                    </div>
+                    
+                    <div class="hero-description">
+                        <h2>EMPREGOS DO FUTURO, COM PROPÓSITO NO PRESENTE.</h2>
+                        <div class="chat-ia-indicator">
+                            <div class="chat-icon"></div>
+                            <span>Assistente de IA disponível</span>
+                        </div>
+                        <p>Utilizamos Inteligência Artificial para otimizar a conexão entre suas competências e o mercado de trabalho, impulsionando seu desenvolvimento e carreira.</p>
+                    </div>
+                    
+                    <div class="hero-options">
+                        <div class="option-card candidate-card">
+                            <h3>PROCURANDO</h3>
+                            <h2>EMPREGO?</h2>
+                            <p>Veja oportunidades disponíveis clicando no botão abaixo!</p>
+                            <button class="btn-primary" data-action="candidate-flow">
+                                <span>Criar Perfil</span>
+                                <i class="fas fa-user-plus"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="option-card employer-card">
+                            <h3>PROCURANDO</h3>
+                            <h2>FUNCIONÁRIOS?</h2>
+                            <p>Cadastre as vagas disponíveis na sua empresa e encontre profissionais qualificados para o seu time.</p>
+                            <button class="btn-primary" data-action="employer-flow">
+                                <span>Criar Perfil Empresarial</span>
+                                <i class="fas fa-building"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Meu Perfil - Seleção -->
+        <section id="meu-perfil" class="page">
+            <div class="page-content">
+                <!-- Seção de Seleção de Tipo (inicial) -->
+                <div id="profile-selection" class="profile-selection-container">
+                    <div class="page-header">
+                        <h2 class="page-title">MEU PERFIL</h2>
+                        <p class="page-subtitle">Escolha o tipo de perfil que deseja criar</p>
+                    </div>
+                    
+                    <div class="profile-type-selection">
+                        <div class="profile-type-card" data-action="select-profile-type" data-type="funcionario">
+                            <div class="profile-type-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Sou Funcionário</h3>
+                            <p>Busco oportunidades de emprego na região do ABC Paulista</p>
+                            <button class="btn-select-type">Selecionar</button>
+                        </div>
+                        
+                        <div class="profile-type-card" data-action="select-profile-type" data-type="empregador">
+                            <div class="profile-type-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Sou Empregador</h3>
+                            <p>Quero cadastrar vagas e encontrar profissionais qualificados</p>
+                            <button class="btn-select-type">Selecionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Perfil Personalizado (após preenchimento) -->
+                <div id="profile-dashboard" class="profile-dashboard-container" style="display: none;">
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="profile-details">
+                                <h2 id="profile-name">Nome do Usuário</h2>
+                                <p id="profile-type-label">Funcionário</p>
+                                <p id="profile-location">Cidade, Estado</p>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn-edit-profile" data-action="edit-profile">
+                                <i class="fas fa-edit"></i>
+                                Editar Perfil
+                            </button>
+                            <button class="btn-logout" data-action="logout-profile">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Sair / Trocar Perfil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard do Funcionário -->
+                    <div id="funcionario-dashboard" class="dashboard-content" style="display: none;">
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Vagas Compatíveis</h4>
+                                    <span class="stat-number">12</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Compatibilidade Média</h4>
+                                    <span class="stat-number">85%</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Cursos Recomendados</h4>
+                                    <span class="stat-number">8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sections">
+                            <div class="dashboard-section">
+                                <h3>Suas Competências</h3>
+                                <div id="user-skills" class="skills-display">
+                                    <!-- Competências serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Próximos Passos</h3>
+                                <div class="next-steps">
+                                    <div class="step-item">
+                                        <i class="fas fa-search"></i>
+                                        <span>Explore vagas compatíveis com seu perfil</span>
+                                        <button class="btn-step" data-action="go-to-vagas">Ver Vagas</button>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>Aprimore suas competências com cursos</span>
+                                        <button class="btn-step" data-action="open-chat-courses">Ver Cursos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard do Empregador -->
+                    <div id="empregador-dashboard" class="dashboard-content" style="display: none;">
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Candidatos Sugeridos</h4>
+                                    <span class="stat-number">24</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Vagas Ativas</h4>
+                                    <span class="stat-number">3</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>Matches Realizados</h4>
+                                    <span class="stat-number">7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sections">
+                            <div class="dashboard-section">
+                                <h3>Informações da Empresa</h3>
+                                <div id="company-info" class="company-display">
+                                    <!-- Informações da empresa serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-section">
+                                <h3>Ações Rápidas</h3>
+                                <div class="quick-actions">
+                                    <div class="action-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Ver candidatos sugeridos para suas vagas</span>
+                                        <button class="btn-action" data-action="go-to-candidates">Ver Candidatos</button>
+                                    </div>
+                                    <div class="action-item">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <span>Cadastrar nova vaga na plataforma</span>
+                                        <button class="btn-action" data-action="create-job">Cadastrar Vaga</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Perfil do Candidato -->
+        <section id="perfil-candidato" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <h2 class="page-title">PERFIL DO CANDIDATO</h2>
+                    <p class="page-subtitle">Preencha com suas informações para que a nossa IA possa buscar melhores oportunidades para o seu perfil</p>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-form">
+                        <div class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>SUAS INFORMAÇÕES:</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo <span class="required">*</span></label>
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado <span class="required">*</span></label>
+                            <select id="estado" required>
+                                <option value="">Selecione um Estado</option>
+                                <option value="SP" selected>São Paulo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cidade">Cidade <span class="required">*</span></label>
+                            <select id="cidade" required>
+                                <option value="">Selecione uma Cidade</option>
+                                <option value="santo-andre">Santo André</option>
+                                <option value="sao-bernardo">São Bernardo do Campo</option>
+                                <option value="sao-caetano">São Caetano do Sul</option>
+                                <option value="diadema">Diadema</option>
+                                <option value="maua">Mauá</option>
+                                <option value="ribeirao-pires">Ribeirão Pires</option>
+                                <option value="rio-grande-serra">Rio Grande da Serra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="programa">Programa braskem concluído <span class="required">*</span></label>
+                            <select id="programa" required>
+                                <option value="">Selecione um Programa</option>
+                                <option value="operador-producao">Operador de Produção</option>
+                                <option value="manutencao-industrial">Manutenção Industrial</option>
+                                <option value="logistica">Logística e Armazenagem</option>
+                                <option value="qualidade">Controle de Qualidade</option>
+                                <option value="seguranca">Segurança do Trabalho</option>
+                                <option value="administrativa">Assistente Administrativo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="competencias">Suas Competências <span class="required">*</span></label>
+                            <div class="competencias-grid">
+                                <!-- Hard Skills -->
+                                <div class="competencia-category">
+                                    <h4>Competências Técnicas</h4>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="operacao-maquinas">
+                                        <span>Operação de Máquinas</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="seguranca-industrial">
+                                        <span>Segurança Industrial</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="controle-qualidade">
+                                        <span>Controle de Qualidade</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="manutencao-preventiva">
+                                        <span>Manutenção Preventiva</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="logistica">
+                                        <span>Logística</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="excel-basico">
+                                        <span>Excel Básico</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="soldagem">
+                                        <span>Soldagem</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="eletrica">
+                                        <span>Elétrica Industrial</span>
+                                    </label>
+                                </div>
+                                
+                                <!-- Soft Skills -->
+                                <div class="competencia-category">
+                                    <h4>Competências Comportamentais</h4>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="trabalho-equipe">
+                                        <span>Trabalho em Equipe</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="comunicacao">
+                                        <span>Comunicação</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="lideranca">
+                                        <span>Liderança</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="proatividade">
+                                        <span>Proatividade</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="adaptabilidade">
+                                        <span>Adaptabilidade</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="resolucao-problemas">
+                                        <span>Resolução de Problemas</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="responsabilidade">
+                                        <span>Responsabilidade</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" value="criatividade">
+                                        <span>Criatividade</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Acordo de Consentimento -->
+                        <div class="consent-section">
+                            <div class="consent-checkbox">
+                                <input type="checkbox" id="consent-data" required>
+                                <label for="consent-data">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Eu concordo com o <a href="#" data-action="show-privacy-policy">Termo de Uso e Política de Privacidade</a> 
+                                    e autorizo o uso dos meus dados para conexão com oportunidades de emprego.
+                                </label>
+                            </div>
+                            <div class="consent-checkbox">
+                                <input type="checkbox" id="consent-contact" required>
+                                <label for="consent-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    Autorizo empresas parceiras a entrarem em contato comigo através dos dados fornecidos.
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn-save" data-action="save-profile">
+                            <i class="fas fa-check"></i>
+                            Salvar seu perfil
+                        </button>
+                        
+                        <!-- Notificação de Sucesso -->
+                        <div class="success-notification" id="profile-success" style="display: none;">
+                            <div class="success-content">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Perfil salvo com sucesso!</h4>
+                                <p>Suas informações foram registradas. Agora você pode aprimorar seu perfil com cursos recomendados.</p>
+                                <button class="btn-improvement" data-action="open-chat-recommendation">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Aprimorar Perfil com Cursos
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Seção de Vagas Recomendadas -->
+                        <div class="recommended-jobs" id="recommended-jobs" style="display: none;">
+                            <h4>Vagas Recomendadas para Você</h4>
+                            <div class="job-recommendations">
+                                <div class="job-rec-card">
+                                    <h5>Operador de Produção - Braskem</h5>
+                                    <p>Compatibilidade: <strong>85%</strong></p>
+                                    <span class="job-location">Santo André, SP</span>
+                                </div>
+                                <div class="job-rec-card">
+                                    <h5>Técnico de Manutenção - Mercedes</h5>
+                                    <p>Compatibilidade: <strong>78%</strong></p>
+                                    <span class="job-location">São Bernardo, SP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-sidebar">
+                        <div class="performance-card">
+                            <h4>Seu desempenho</h4>
+                            <div class="completude-container">
+                                <div class="completude-label">Completude do perfil</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progress-fill"></div>
+                                </div>
+                                <div class="progress-text">Complete seu perfil para aumentar suas chances!</div>
+                                <div class="progress-note">
+                                    <em>*Conforme preenchendo as informações o grau de amplitude aumenta, essa barra colore e tals*</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Informações da Vaga (Empresário) -->
+        <section id="informacoes-vaga" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <p class="page-subtitle">Preencha com suas informações para que a nossa IA possa buscar melhores oportunidades para sua vaga</p>
+                </div>
+                
+                <div class="vaga-container">
+                    <div class="vaga-form">
+                        <h3>INFORMAÇÕES DA VAGA</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome-empresa">Nome da empresa <span class="required">*</span></label>
+                            <input type="text" id="nome-empresa" placeholder="Nome da sua empresa" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ <span class="required">*</span></label>
+                            <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cargo-vaga">Cargo da vaga <span class="required">*</span></label>
+                            <input type="text" id="cargo-vaga" placeholder="Ex: Operador de Produção" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="area-atuacao">Área de atuação <span class="required">*</span></label>
+                            <select id="area-atuacao" required>
+                                <option value="">Selecione uma área</option>
+                                <option value="producao">Produção</option>
+                                <option value="manutencao">Manutenção</option>
+                                <option value="logistica">Logística</option>
+                                <option value="qualidade">Qualidade</option>
+                                <option value="seguranca">Segurança</option>
+                                <option value="administrativa">Administrativa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="local-trabalho">Local de trabalho <span class="required">*</span></label>
+                            <select id="local-trabalho" required>
+                                <option value="">Selecione uma cidade</option>
+                                <option value="santo-andre">Santo André</option>
+                                <option value="sao-bernardo">São Bernardo do Campo</option>
+                                <option value="sao-caetano">São Caetano do Sul</option>
+                                <option value="diadema">Diadema</option>
+                                <option value="maua">Mauá</option>
+                                <option value="ribeirao-pires">Ribeirão Pires</option>
+                                <option value="rio-grande-serra">Rio Grande da Serra</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cursos-necessarios">Cursos necessários</label>
+                            <textarea id="cursos-necessarios" placeholder="Ex: NR10, NR35, Curso de Soldagem..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="habilidades-necessarias">Habilidades necessárias</label>
+                            <textarea id="habilidades-necessarias" placeholder="Ex: Trabalho em equipe, Proatividade, Experiência com máquinas..."></textarea>
+                        </div>
+                        
+                        <button class="btn-continue" data-action="continue-vaga">
+                            <i class="fas fa-arrow-right"></i>
+                            Continuar
+                        </button>
+                    </div>
+                    
+                    <div class="vaga-sidebar">
+                        <div class="profile-indicator">
+                            <h4>PERFIL DA EMPRESA</h4>
+                        </div>
+                        
+                        <div class="abc-note">
+                            <p><em>*Empresas do ABC Paulista têm prioridade na plataforma*</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Vagas Cadastradas (Empresário) -->
+        <section id="vagas-empresario" class="page">
+            <div class="page-content">
+                <h2 class="page-title">Candidatos Sugeridos</h2>
+                <p class="page-subtitle">Profissionais qualificados que se encaixam com o perfil da sua empresa</p>
+                
+                <!-- Seção de Candidatos Sugeridos -->
+                <div class="candidatos-sugeridos-section">
+                    <h3>Talentos Recomendados para Você</h3>
+                    <div class="candidatos-grid">
+                        <div class="candidato-card">
+                            <div class="candidato-header">
+                                <div class="candidato-avatar">LC</div>
+                                <div class="candidato-info">
+                                    <h4>Lucas Costa</h4>
+                                    <p>Operador de Produção</p>
+                                    <div class="match-score">
+                                        <span class="match-percentage">92%</span>
+                                        <span class="match-label">Compatibilidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato-skills">
+                                <span class="skill-tag">Petroquímica</span>
+                                <span class="skill-tag">NR-10</span>
+                                <span class="skill-tag">5 anos exp.</span>
+                            </div>
+                            <div class="candidato-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Santo André, SP</span>
+                            </div>
+                            <button class="btn-contact-candidate">
+                                <i class="fas fa-envelope"></i>
+                                Entrar em Contato
+                            </button>
+                        </div>
+                        
+                        <div class="candidato-card">
+                            <div class="candidato-header">
+                                <div class="candidato-avatar">MS</div>
+                                <div class="candidato-info">
+                                    <h4>Mariana Silva</h4>
+                                    <p>Técnica de Manutenção</p>
+                                    <div class="match-score">
+                                        <span class="match-percentage">88%</span>
+                                        <span class="match-label">Compatibilidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato-skills">
+                                <span class="skill-tag">Soldagem</span>
+                                <span class="skill-tag">NR-35</span>
+                                <span class="skill-tag">3 anos exp.</span>
+                            </div>
+                            <div class="candidato-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>São Bernardo, SP</span>
+                            </div>
+                            <button class="btn-contact-candidate">
+                                <i class="fas fa-envelope"></i>
+                                Entrar em Contato
+                            </button>
+                        </div>
+                        
+                        <div class="candidato-card">
+                            <div class="candidato-header">
+                                <div class="candidato-avatar">RS</div>
+                                <div class="candidato-info">
+                                    <h4>Roberto Santos</h4>
+                                    <p>Auxiliar de Logística</p>
+                                    <div class="match-score">
+                                        <span class="match-percentage">85%</span>
+                                        <span class="match-label">Compatibilidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato-skills">
+                                <span class="skill-tag">Empilhadeira</span>
+                                <span class="skill-tag">Estoque</span>
+                                <span class="skill-tag">2 anos exp.</span>
+                            </div>
+                            <div class="candidato-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>São Caetano, SP</span>
+                            </div>
+                            <button class="btn-contact-candidate">
+                                <i class="fas fa-envelope"></i>
+                                Entrar em Contato
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção de Vagas Cadastradas -->
+                <div class="vagas-cadastradas-section">
+                    <h3>Suas Vagas Ativas</h3>
+                
+                <div class="vagas-empresario-container">
+                    <div class="vaga-empresario-item">
+                        <div class="vaga-header">
+                            <h3>Operador de Produção - Área Petroquímica</h3>
+                            <div class="status-indicator active"></div>
+                        </div>
+                        <p class="vaga-status">Vaga ativa • Publicada há 2 dias</p>
+                        
+                        <h4>Perfis interessados (3)</h4>
+                        <div class="perfis-interessados">
+                            <div class="perfil-card">
+                                <div class="perfil-avatar">LD</div>
+                                <div class="perfil-info">
+                                    <span class="perfil-time">2 horas</span>
+                                    <span class="perfil-name">Lucas Dias</span>
+                                </div>
+                                <button class="btn-view-profile">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="perfil-card">
+                                <div class="perfil-avatar">MS</div>
+                                <div class="perfil-info">
+                                    <span class="perfil-time">5 horas</span>
+                                    <span class="perfil-name">Maria Silva</span>
+                                </div>
+                                <button class="btn-view-profile">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="perfil-card">
+                                <div class="perfil-avatar">JS</div>
+                                <div class="perfil-info">
+                                    <span class="perfil-time">1 dia</span>
+                                    <span class="perfil-name">João Santos</span>
+                                </div>
+                                <button class="btn-view-profile">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vaga-empresario-item">
+                        <div class="vaga-header">
+                            <h3>Técnico de Manutenção - Área Industrial</h3>
+                            <div class="status-indicator inactive"></div>
+                        </div>
+                        <p class="vaga-status">Vaga pausada • Publicada há 1 semana</p>
+                        
+                        <h4>Perfis interessados (0)</h4>
+                        <div class="perfis-interessados">
+                            <div class="perfil-card">
+                                <div class="perfil-avatar">LD</div>
+                                <div class="perfil-info">
+                                    <span class="perfil-time">00 horas</span>
+                                    <span class="perfil-name">xxxxxx</span>
+                                </div>
+                                <button class="btn-view-profile">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="perfil-card">
+                                <div class="perfil-avatar">LD</div>
+                                <div class="perfil-info">
+                                    <span class="perfil-time">00 horas</span>
+                                    <span class="perfil-name">xxxxxx</span>
+                                </div>
+                                <button class="btn-view-profile">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="empresario-sidebar">
+                    <div class="profile-indicator">
+                        <h4>PERFIL DO EMPRESÁRIO</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Vagas (Candidato) -->
+        <section id="vagas" class="page">
+            <div class="page-content">
+                <div class="vagas-container">
+                    <div class="vagas-section">
+                        <h3>Vagas compatíveis com você</h3>
+                        <div id="vagas-compativeis" class="vagas-list">
+                            <div class="vaga-card">
+                                <div class="vaga-header">
+                                    <div class="vaga-info">
+                                        <h4>Operador de Produção - Braskem - Santo André</h4>
+                                        <div class="vaga-details">
+                                            <span><i class="fas fa-dollar-sign"></i> R$ 2.800 - R$ 3.500</span>
+                                            <span><i class="fas fa-clock"></i> Tempo integral</span>
+                                            <span><i class="fas fa-users"></i> 12 candidatos</span>
+                                        </div>
+                                    </div>
+                                    <div class="compatibilidade-badge">
+                                        <span>Compatibilidade</span>
+                                        <span class="percentage">92%</span>
+                                    </div>
+                                </div>
+                                <div class="match-reasons">
+                                    <h5>Por que você é compatível:</h5>
+                                    <div class="reasons-list">
+                                        <span class="reason-tag">✓ Experiência em Produção</span>
+                                        <span class="reason-tag">✓ Curso SENAI Completo</span>
+                                        <span class="reason-tag">✓ Localização Próxima</span>
+                                        <span class="reason-tag">✓ Perfil Comportamental</span>
+                                    </div>
+                                </div>
+                                <div class="recommended-courses-vaga">
+                                    <h5>Cursos recomendados para esta vaga:</h5>
+                                    <div class="courses-list">
+                                        <div class="course-suggestion">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <span>NR-12 Segurança em Máquinas - SENAI (40h)</span>
+                                        </div>
+                                        <div class="course-suggestion">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <span>Lean Manufacturing - SENAI (60h)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-interesse">Me interesso</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vagas-section">
+                        <h3>Outras vagas</h3>
+                        <div id="outras-vagas" class="vagas-list">
+                            <div class="vaga-card">
+                                <div class="vaga-header">
+                                    <div class="vaga-info">
+                                        <h4>Vaga para xxxxxxxx - Local xxxxx - Área - xxxxx</h4>
+                                    </div>
+                                    <div class="compatibilidade-badge low">
+                                        <span>Compatibilidade</span>
+                                        <span class="percentage">15%</span>
+                                    </div>
+                                </div>
+                                <button class="btn-interesse">Me interesso</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Tutoriais -->
+        <section id="tutoriais" class="page">
+            <div class="page-content">
+                <h2 class="page-title">TUTORIAIS</h2>
+                <p class="page-subtitle">Aprenda a usar todas as funcionalidades do SKYNET</p>
+                
+                <!-- Primeira fileira - Tutoriais básicos -->
+                <div class="tutorial-row">
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="perfil-candidato">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Como criar meu perfil?</h3>
+                            <p>Passo a passo para cadastrar suas informações e competências</p>
+                            <span class="tutorial-duration">3 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="encontrar-vagas">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Como encontrar vagas?</h3>
+                            <p>Descubra como buscar oportunidades compatíveis com seu perfil</p>
+                            <span class="tutorial-duration">4 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="mentor-ia">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Como usar a BIA?</h3>
+                            <p>Aproveite ao máximo sua mentora de carreira com IA</p>
+                            <span class="tutorial-duration">5 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Segunda fileira - Tutoriais avançados -->
+                <div class="tutorial-row">
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="compatibilidade">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Sistema de compatibilidade</h3>
+                            <p>Entenda como calculamos sua compatibilidade com as vagas</p>
+                            <span class="tutorial-duration">3 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="cadastrar-vagas">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Para empresários</h3>
+                            <p>Como cadastrar vagas e encontrar candidatos ideais</p>
+                            <span class="tutorial-duration">6 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="dicas-carreira">
+                        <div class="tutorial-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Dicas de carreira</h3>
+                            <p>Orientações para crescer profissionalmente no ABC</p>
+                            <span class="tutorial-duration">7 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recursos de Acessibilidade -->
+                <h3 class="accessibility-title">Recursos de Acessibilidade</h3>
+                <div class="accessibility-tutorials">
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="vlibras">
+                        <div class="tutorial-icon accessibility">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>VLibras</h3>
+                            <p>Tradução automática para Língua Brasileira de Sinais</p>
+                            <span class="tutorial-duration">2 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="alto-contraste">
+                        <div class="tutorial-icon accessibility">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Alto contraste</h3>
+                            <p>Ajuste visual para melhor visualização do conteúdo</p>
+                            <span class="tutorial-duration">1 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card interactive" data-action="show-tutorial" data-tutorial-id="leitor-tela">
+                        <div class="tutorial-icon accessibility">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Leitor de tela</h3>
+                            <p>Navegação por voz para pessoas com deficiência visual</p>
+                            <span class="tutorial-duration">3 min</span>
+                        </div>
+                        <div class="tutorial-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção de vídeo demonstrativo -->
+                <div class="tutorial-video-section">
+                    <div class="video-container">
+                        <div class="video-placeholder" data-action="play-video">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <h4>Vídeo: Como usar o SKYNET</h4>
+                                <p>Demonstração completa da plataforma em 5 minutos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-info">
+                        <h3>Demonstração completa</h3>
+                        <p>Assista ao vídeo tutorial que mostra todas as funcionalidades do SKYNET, desde o cadastro até a candidatura em vagas.</p>
+                        
+                        <div class="video-topics">
+                            <h4>O que você vai aprender:</h4>
+                            <ul>
+                                <li>Criar e otimizar seu perfil profissional</li>
+                                <li>Navegar pelas vagas disponíveis</li>
+                                <li>Usar a BIA para orientação de carreira</li>
+                                <li>Entender o sistema de compatibilidade</li>
+                                <li>Recursos de acessibilidade disponíveis</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn-watch-video" data-action="play-video">
+                            <i class="fas fa-play"></i>
+                            Assistir Tutorial Completo
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- FAQ Rápido -->
+                <div class="faq-section">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>O SKYNET é gratuito?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! O SKYNET é completamente gratuito para candidatos. Empresas têm acesso básico gratuito e opções premium para maior visibilidade.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Como a BIA me ajuda?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A BIA analisa seu perfil e oferece recomendações personalizadas de vagas, cursos e dicas de carreira específicas para o mercado do ABC Paulista.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Posso usar no celular?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! O SKYNET é totalmente responsivo e funciona perfeitamente em celulares, tablets e computadores.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item" data-action="toggle-faq">
+                            <div class="faq-question">
+                                <span>Meus dados estão seguros?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutamente! Seguimos rigorosos protocolos de segurança e privacidade. Seus dados são criptografados e nunca compartilhados sem sua autorização.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chat IA (BIA) - Apenas símbolo -->
+    <div class="chat-container">
+        <button class="chat-toggle" id="chat-toggle" aria-label="Abrir Chat BIA - Mentora de Carreira">
+            <i class="fas fa-robot"></i>
+        </button>
+        
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <h3>BIA - Mentora de Carreira</h3>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot-message">
+                    <div class="message-content">
+                        <p>Olá! Sou a BIA, sua mentora de carreira do ABC Paulista.</p>
+                        <p>Estou aqui para te ajudar a encontrar emprego na região. Como posso te ajudar hoje?</p>
+                    </div>
+                </div>
+                
+                <div class="quick-questions">
+                    <button class="quick-btn" onclick="sendQuickMessage('Quais vagas têm no ABC agora?')">
+                        Vagas disponíveis no ABC
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Como melhorar meu currículo?')">
+                        Melhorar currículo
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Dicas para entrevista')">
+                        Dicas de entrevista
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Digite sua mensagem...">
+                <button class="chat-send" id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/employer.js"></script>
+    
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-widget"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
