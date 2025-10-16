@@ -1,0 +1,77 @@
+body {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
+
+    height: 100vh;
+    gap: 5px;
+
+    grid-template-areas:
+    "quadrado1 quadrado2 quadrado3"
+    "quadrado4 quadrado5 quadrado6"
+    "quadrado7 quadrado8 quadrado9"
+    "quadrado10  quadrado11 quadrado12"
+    ;
+
+}
+
+.quadrado1 {
+    grid-area: quadrado1;
+    background-color: rgb(158, 0, 158);
+}
+
+.quadrado2 {
+    grid-area: quadrado2;
+    background-color: rgb(247, 123, 74);
+}
+
+.quadrado3 {
+    grid-area: quadrado3;
+    background-color: rgb(8, 236, 46);
+}
+
+.quadrado4 {
+    grid-area: quadrado4;
+    background-color: rgb(207, 79, 169);
+}
+
+.quadrado5 {
+    grid-area: quadrado5;
+    background-color: rgb(236, 158, 69);
+}
+
+.quadrado6 {
+    grid-area: quadrado6;
+    background-color: rgb(136, 236, 55);
+}
+
+.quadrado7 {
+    grid-area: quadrado7;
+    background-color: rgb(226, 98, 220);
+}
+
+.quadrado8 {
+    grid-area: quadrado8;
+    background-color: rgb(236, 192, 95);
+}
+
+.quadrado9 {
+    grid-area: quadrado9;
+    background-color: rgb(163, 255, 102);
+}
+
+.quadrado10 {
+    grid-area: quadrado10;
+    background-color: rgb(228, 165, 225);
+}
+
+.quadrado11 {
+    grid-area: quadrado11;
+    background-color: rgb(250, 224, 176);
+}
+
+.quadrado12 {
+    grid-area: quadrado12;
+    background-color: rgb(180, 240, 165);
+}
