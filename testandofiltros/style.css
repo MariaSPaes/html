@@ -1,0 +1,93 @@
+img{
+    width: 250px;
+    border-radius: 15px;
+
+}
+.gray1{
+    filter: grayscale(100%);
+}
+.sepia1 {
+    filter: invert(100%);
+}
+.blur1{
+    filter: blur(4px);
+}
+.bright1{
+    filter: brightness(150%);
+}
+.contrast1{
+    filter: contrast(200%);
+}
+.efeito1{
+    filter: blur(4px);
+    margin: 50px;
+}
+.efeito1:hover{
+    width: 300px;
+    filter: none;
+}
+.grid {
+    display: grid;
+
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+
+    row-gap: 70px;
+
+    align-items: center;
+    justify-content: space-around;
+
+    grid-template-areas: 
+    "filme1 filme2 filme3"
+    "filme4 filme5 filme6";
+}
+.filme1 {
+    width: 300px;
+    grid-area: filme1;
+    filter: grayscale(100%) blur(10px);
+}
+.filme1:hover{
+    filter: none;
+}
+.filme2 {
+    width: 300px;
+    grid-area: filme2;
+    filter: grayscale(100%) blur(10px);
+}
+.filme2:hover {
+    filter: none;
+}
+.filme3{
+   width: 300px;
+    grid-area: filme3;
+    filter: grayscale(100%) blur(10px);
+}
+.filme3:hover{
+    filter: none;
+}
+.filme4 {
+    width: 300px;
+    grid-area: filme4;
+    filter: grayscale(100%) blur(10px);
+}
+.filme4:hover{
+    filter: none;
+}
+.filme5 {
+    width: 300px;
+    grid-area: filme5;
+    filter: grayscale(100%) blur(10px);
+}
+.filme5:hover{
+    filter: none;
+}
+.filme6 {
+   width: 300px;
+    grid-area: filme6;
+    filter: grayscale(100%) blur(10px);
+}
+
+
+h1 {
+    margin: 20px;
+}
