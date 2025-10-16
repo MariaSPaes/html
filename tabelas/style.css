@@ -1,0 +1,23 @@
+section{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 50px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: rgba(121, 23, 104, 0.614);
+}
+.Apro{
+    color: green;   
+}
+.repr{
+    color: red;
+}
