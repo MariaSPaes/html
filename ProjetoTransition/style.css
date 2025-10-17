@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cabecalho {
+  position: relative;
+  height: 600px;
+  background: url("https://wallpapercat.com/w/full/c/8/c/734402-3840x2160-desktop-4k-hayao-miyazaki-background-image.jpg") center / cover no-repeat;
+  color: rgb(0, 0, 0);
+}
+
+.topo {
+  background: rgba(255, 255, 255, 0.699);
+  display: flex;
+  align-items: center;
+  padding-top: -10px;
+  text-align: center;
+  justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+   box-shadow: 15px 10px 30px rgb(151, 151, 151);
+}
+
+.logo-area {
+  display: flex;
+  align-items: left;
+
+}
+
+.logo-area img {
+  height: 100px;
+   align-items: left;
+   margin-right: 900px;
+}
+
+.menu a {
+  color: rgb(255, 255, 255);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 16px;
+  justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+  background-color:darkgreen;
+  border-radius: 30px;
+  padding: 8px 16px;
+  box-shadow: 15px 10px 30px rgb(151, 151, 151);
+  transform: scale(2.1);
+  transition: 0.5s ease-in;
+
+}
+
+.menu a:hover {
+  color:darkgreen;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  transform: scale(2.1);
+  transition: 0.5s;
+}
+
+.menu {
+   justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+}
+
+.cartao {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 200px;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(58, 58, 58, 0.534);
+  width: 30%;
+}
+
+.cartao:hover {
+  box-shadow: 0 10px 30px rgba(58, 58, 58, 0.7);
+  transform: scale(1.2);
+  transition: all 0.7s;
+}
+
+.btn-azul {
+  display: inline-block;
+  background: rgb(0, 8, 57);
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 25px;
+}
+
+.btn-azul:hover {
+  background: rgb(96, 255, 88);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  color: black;
+
+}
+
+.principal {
+  background: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+}
+
+.conteudo {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+  box-shadow: 0 6px 18px rgba(98, 98, 98, 0.534);
+  margin-right: 100px;
+}
+
+.conteudo:hover {
+  box-shadow: 0 10px 30px rgba(98, 98, 98, 0.7);
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+
+.texto h2 {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  background:rgb(6, 11, 34);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background: rgb(96, 255, 88);
+  transform: scale(1.2);
+  color: black;
+}
+
+.kiki {
+  width: 450px;
+  margin-left: -200px;
+  transition: transform 0.3s;
+  margin-right: 150px;
+
+}
+
+.kiki:hover {
+  transform: scale(1.2);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  background: #ffffff;
+  border-radius: 50px;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.card {
+  background: rgb(72, 0, 0);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  color: white;
+  box-shadow: 12px 12px 24px rgb(114, 114, 114);
+}
+
+.card:hover {
+  background:white;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-card {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn-card:hover {
+  background: rgb(208, 208, 208);
+  transform: translateX(-50%) scale(1.1);
+  color: black;
+}
+
+.card h3 {
+  margin: 15px 0;
+  transition: color 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 10px 10px 20px rgb(95, 0, 0);
+}
+
+.card:hover h3 {
+  color: rgb(95, 0, 0);
+}
+
+footer {
+  background: url("https://i.etsystatic.com/55907407/r/il/2796c4/6965010769/il_fullxfull.6965010769_gw8f.jpg") center / cover no-repeat;
+  color: rgb(14, 71, 0);
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+
+}
+
+.botoes-rodape {
+  margin-top: 15px;
+   text-align: center;
+    justify-content: center;
+}
+
+.botoes-rodape a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  font-size: larger;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 20px 10px 50px rgb(0, 92, 11);
+}
+
+.botoes-rodape a:hover {
+  background: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.nome {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif 'Lucida Handwriting';
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 20px 10px 50px rgb(0, 92, 11);
+    padding: 15px;
+    margin-left: 800px;
+    margin-right: 800px;
+    border-radius: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logofooter {
+    height: 110px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.titulo {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 40px rgb(0, 0, 0);
+    padding: 30px;
+
+}
+
+.titulo:hover {
+    color: rgb(179, 255, 128);
+    transition: 1.5s;
+    transform: scale(1.1);
+}
+
+.container {
+    background: rgb(0, 112, 43);
+    padding: 50px;
+    font-weight: 600;
+
+   
+}
+
+h2 {
+  margin-left: 200px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  text-shadow: 2px 10px 10px rgb(185, 185, 185);
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  line-height: 110px;
+} 
+
+h2:hover {
+  color: rgb(0, 0, 0);
+  transition: 1.2s;
+  transform: scale(1.1);
+}
