@@ -1,0 +1,124 @@
+.quadrado {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+    animation: andar 5s infinite alternate;
+    
+}
+
+
+@keyframes andar {
+    0% {transform: translateX(0); background-color: red;}
+    50% {transform: translateX(100px); background-color: blueviolet;} /*andar */
+    100% {transform: translateX(200px); background-color: rgb(200, 255, 0);} /*voltar*/
+}
+.quadrado2 {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    animation: mudaCor 6s infinite alternate;
+}
+
+@keyframes mudaCor {
+    0%{background-color:  red;}
+    25%{background-color: blue;}
+    50%{background-color: green;}
+    100%{background-color: red;}
+}
+
+
+h1 {
+    text-align: left;
+    margin-top: 50px;
+}
+
+button {
+    margin-left: 60px;
+    width: 200px;
+    font-size: 15px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: pink;
+    animation:
+    aumentar 5s infinite alternate,
+    letras 5s infinite alternate,
+    cor 5s infinite alternate;
+    border: none;
+    font-family:cursive;
+    font-weight: bold;
+}
+@keyframes cor {
+    from {background-color: rgb(230, 130, 255);}
+    to {background-color: rgb(255, 253, 132);}
+}
+@keyframes letras {
+    from {color: rgb(255, 255, 255);}
+    to {color: rgb(77, 52, 7);}
+}
+@keyframes aumentar {
+    from {transform: scale(1);}
+    to {transform: scale(1.5);}
+}
+
+p {
+    margin-left: 60px;
+    width: 400px;
+    font-size: 20px;
+    animation: piscar 3s infinite alternate;
+    color: orchid;
+}
+
+@keyframes piscar {
+    50%{color: blue;}
+    100%{color: green;}
+}
+
+
+
+.soldiv {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+    border: black 2px solid;
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+
+
+}
+
+.sol {
+    width: 200px;
+    height: 200px;
+    animation: nascendo 4s infinite alternate;
+}
+
+@keyframes nascendo {
+    from {transform: translateY(0px);}
+    to {transform: translateY(400px); opacity: 2%;}
+}
+
+.imgcoracao {
+    width: 500px;
+    height: 500px;
+    animation: bater 1s infinite alternate;
+}
+
+@keyframes bater {
+    from {transform: scale(1);}
+    to {transform: scale(1.3);}
+}
+
+.flutuante {
+    animation: flutuar 3s infinite alternate;
+    color: rgb(139, 47, 139);
+    margin-bottom: 200px;
+}
+
+@keyframes flutuar {
+    from {transform: translateY(0px);}
+    to {transform: translateY(200px);}
+}
