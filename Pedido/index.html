@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <style>
+        body {
+            background-image: url('https://egobrazil.ig.com.br/wp-content/uploads/2025/01/unnamed-3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #558F5F;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .botaoS, .botaoN {
+            padding: 20px 30px;
+            font-size: 40px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #A02E60;
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>MÃE, POR FAVOR, POSSO IR NO SHOW DO MENOS É MAIS?</h1>
+    </div>
+
+    <div class="botoes">
+        <button onclick="sim()" class="botaoS">SIM</button>
+        <button id="botao" onmouseover="desvia()" class="botaoN">NÃO</button>
+    </div>
+
+    <script>
+        function sim() {
+            location.href = "https://marketplace.canva.com/EAE_LSURkxo/1/0/1600w/canva-cart%C3%A3o-de-agradecimento-simples%2C-muito-obrigada-com-cora%C3%A7%C3%A3o-MFgX-mIBTF0.jpg"
+        }
+
+        let botao = document.getElementById("botao");
+
+        function desvia() {
+            botao.style.position = "absolute";
+            // Adicionamos valores aleatórios para as posições
+            botao.style.bottom = gerarPosicao(10, 80);
+            botao.style.left = gerarPosicao(10, 80);
+        }
+
+        function gerarPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+</html>
