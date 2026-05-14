@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <h1>Controle Financeiro</h1>
+
+        <div class="resumo">
+            <div class="entrada">
+                <h3>Entrada</h3>
+                <p id="totalEntrada">R$ 0,00</p>
+            </div>
+            <div class="saida">
+                <h3>Saída</h3>
+                <p id="totalSaida">R$ 0,00</p>
+            </div>
+            <div class="saldo">
+                <h3>Saldo</h3>
+                <p id="totalSaldo">R$ 0,00</p>
+            </div>
+        </div>
+
+        <div class="detalhes">
+            <div class="card detalhes-card">
+                <span>Movimentações</span>
+                <strong id="totalMovimentacoes">0</strong>
+            </div>
+            <div class="card detalhes-card">
+                <span>Entradas</span>
+                <strong id="contEntradas">0</strong>
+            </div>
+            <div class="card detalhes-card">
+                <span>Saídas</span>
+                <strong id="contSaidas">0</strong>
+            </div>
+        </div>
+
+        <form id="formulario">
+            <input type="text" id="descricao" placeholder="Descrição" required>
+            <input type="number" id="valor" placeholder="Valor" required>
+
+            <select id="tipo">
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+    
+        <h2>Extrato</h2>
+        <ul id="listagem" class="listagem"></ul>
+    </section>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
