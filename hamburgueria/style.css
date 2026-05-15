@@ -1,0 +1,811 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --creme:#F0E6D6;
+  --preto:#111111;
+  --mostarda:#D89A36;
+  --marrom:#5A3A26;
+  --laranja:#C86B2A;
+  --off:#FFF5E4;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:var(--preto);
+  color:var(--off);
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.header{
+  width:100%;
+  height:92px;
+  padding:0 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  background:rgba(17,17,17,.72);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo img{
+  width:75px;
+  margin-top: 15px;
+}
+
+.menu{
+  display:flex;
+  gap:34px;
+}
+
+.menu a{
+  color:var(--off);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.menu a:hover{
+  color:var(--mostarda);
+}
+
+.btn-header,
+.btn-main{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 28px;
+  border-radius:999px;
+  background:var(--mostarda);
+  color:var(--preto);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.btn-header:hover,
+.btn-main:hover{
+  background:var(--off);
+  transform:translateY(-3px);
+}
+
+.menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  color:var(--off);
+  font-size:34px;
+  cursor:pointer;
+}
+
+.hero{
+  width:100%;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.slide{
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.slide-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(17,17,17,.85), rgba(17,17,17,.35), rgba(17,17,17,.72)),
+    radial-gradient(circle at center, rgba(216,154,54,.18), transparent 45%);
+}
+
+.slide-content{
+  position:absolute;
+  top:54%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+  z-index:5;
+  width:min(850px, 90%);
+}
+
+.hero-logo{
+  width:100px;
+  margin:0 auto 26px;
+}
+
+.slide-content span,
+.section-title span,
+.sobre-text span,
+.combo-content span,
+.contato span{
+  color:var(--mostarda);
+  font-size:20px;
+  font-weight:900;
+box-shadow: #070707;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  margin-bottom: 10px;
+}
+
+.slide-content h1{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:clamp(40px, 6vw, 90px);
+  line-height:.86;
+  letter-spacing:-2px;
+    margin:0 auto 70px;
+    margin-top: 50px;
+   text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.slide-content p{
+  color:rgba(255,255,255,.82);
+  max-width:640px;
+  margin:0 auto 80px;
+  font-size:18px;
+  line-height:1.7;
+  background-color: #11111150;
+  border-radius: 5px;
+}
+
+.arrow{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(17,17,17,.45);
+  color:var(--off);
+  font-size:46px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:20;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.arrow:hover{
+  background:var(--mostarda);
+  color:var(--preto);
+}
+
+.prev{
+  left:32px;
+}
+
+.next{
+  right:32px;
+}
+
+.hero-dots{
+  position:absolute;
+  bottom:34px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:12px;
+  z-index:30;
+}
+
+.dot{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,.4);
+  cursor:pointer;
+}
+
+.dot.active{
+  width:36px;
+  border-radius:999px;
+  background:var(--mostarda);
+}
+
+.features{
+  background: var(--creme);
+  color: var(--preto);
+  padding: 42px 6%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 22px;
+}
+
+.feature{
+  padding: 24px;
+  border-right: 1px solid rgba(17,17,17,.14);
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.feature-icon{
+  min-width: 58px;
+  min-height: 58px;
+  border-radius: 18px;
+  background: rgba(216,154,54,.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon i{
+  font-size: 24px;
+  color: var(--mostarda);
+}
+
+.feature h3{
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.feature p{
+  color: #5b4030;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.promocoes{
+  padding:90px 6%;
+  background:
+    linear-gradient(rgba(17,17,17,.94), rgba(17,17,17,.94)),
+    url("assets/textura-preta.jpg");
+  background-size:cover;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.cupom-card{
+  min-height:340px;
+  border-radius:32px;
+  padding:46px;
+  background:
+    linear-gradient(90deg, rgba(216,154,54,.92), rgba(216,154,54,.86)),
+    url("https://vejario.abril.com.br/wp-content/uploads/2023/05/volcanic2.jpg?quality=70&strip=info&w=720&crop=1");
+  background-size:cover;
+  background-position:center;
+  color:var(--preto);
+}
+
+.cupom-card span{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-weight:800;
+}
+
+.cupom-card h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:92px;
+  line-height:.9;
+  margin:20px 0 8px;
+}
+
+.cupom-card strong{
+
+  color:var(--preto);
+margin-top: 10px;
+  border-radius:10px;
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.cupom-card p{
+  font-weight:800;
+  margin-bottom:28px;
+}
+
+.cupom-card a,
+.promo-combo a,
+.delivery a{
+  display:inline-flex;
+  min-height:48px;
+  align-items:center;
+  justify-content:center;
+  padding:0 26px;
+  border-radius:999px;
+  background:var(--preto);
+  color:var(--off);
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.promo-combo{
+  border-radius:32px;
+  padding:46px;
+  background:
+    linear-gradient(90deg, rgba(17,17,17,.95), rgba(17,17,17,.45)),
+    url("https://img1.wsimg.com/isteam/ip/51f078de-bcfb-4fe2-b839-6ee561a1eaa5/53A5FCD3-1DB0-4337-9F8B-93E8916853AE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25");
+  background-size:cover;
+  background-position:center;
+}
+
+.promo-combo span{
+  color:var(--mostarda);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.promo-combo h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:58px;
+  line-height:.9;
+  margin:18px 0;
+}
+
+.promo-combo p{
+  color:rgba(255,255,255,.78);
+  margin-bottom:10px;
+}
+
+.promo-combo strong{
+  display:block;
+  color:var(--mostarda);
+  font-size:42px;
+  margin-bottom:28px;
+}
+
+.cardapio{
+  padding:110px 6%;
+  background:var(--preto);
+  color:var(--off);
+}
+
+.section-title{
+  max-width:760px;
+  margin-bottom:58px;
+}
+
+.section-title.center{
+  text-align:center;
+  margin-inline:auto;
+}
+
+.section-title h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:clamp(54px, 6vw, 88px);
+  line-height:.9;
+  margin:14px 0;
+}
+
+.section-title p{
+  color:rgba(255,255,255,.72);
+  line-height:1.7;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.card{
+  background:#1B1B1B;
+  border-radius:32px;
+  overflow:hidden;
+  border:1px solid rgba(216,154,54,.28);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 60px rgba(0,0,0,.28);
+}
+
+.card.destaque{
+  background:linear-gradient(180deg, #24150e, #111);
+}
+
+.card img{
+  height:310px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:30px;
+}
+
+.card-content span{
+  color:var(--mostarda);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.card-content h3{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:42px;
+  margin:12px 0;
+}
+
+.card-content p{
+  color:rgba(255,255,255,.72);
+  line-height:1.7;
+}
+
+.card-content strong{
+  display:block;
+  color:var(--mostarda);
+  font-size:30px;
+  margin-top:22px;
+}
+
+.combo-banner{
+  min-height:620px;
+  padding:110px 6%;
+  position:relative;
+  background:url(assets/comboBanner.jpg);
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+}
+
+.combo-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(17,17,17,.96), rgba(17,17,17,.55), rgba(17,17,17,.25));
+}
+
+.combo-content{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+}
+
+.combo-content h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:clamp(50px, 6vw, 90px);
+  line-height:.88;
+  margin:18px 0;
+}
+
+.combo-content > p{
+  color:rgba(255,255,255,.78);
+  max-width:560px;
+  line-height:1.8;
+}
+
+.combo-list{
+  margin:34px 0;
+  display:grid;
+  gap:14px;
+}
+
+.combo-list div{
+  background:rgb(42, 38, 38);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.combo-list p{
+  font-weight:800;
+}
+
+.combo-list strong{
+  color:var(--mostarda);
+}
+
+.sobre{
+  padding:110px 6%;
+  background:var(--marrom);
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.sobre-img img{
+  height:580px;
+  margin-top: 25px;
+  object-fit:cover;
+  border-radius:36px;
+}
+
+.sobre-text h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:clamp(45px, 1vw, 50px);
+  line-height:.9;
+  margin:30px 0;
+
+}
+
+.sobre-text > p{
+  color:rgba(255,255,255,.76);
+  line-height:1.8;
+  max-width:640px;
+}
+
+.sobre-grid{
+  margin-top:34px;
+  display:grid;
+  gap:16px;
+}
+
+.sobre-grid div{
+  background:rgba(17,17,17,.35);
+  border:1px solid rgba(255,255,255,.09);
+  padding:22px;
+  border-radius:22px;
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.sobre-grid strong{
+  color:var(--mostarda);
+  font-family:'Mocha Choco', sans-serif;
+  font-size:40px;
+}
+
+.depoimentos{
+  padding:100px 6%;
+  background:var(--creme);
+  color:var(--preto);
+}
+
+.depoimentos .section-title span{
+  color:var(--laranja);
+}
+
+.depoimentos .section-title p{
+  color:#5b4030;
+}
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.reviews div{
+  background:var(--off);
+  border-radius:28px;
+  padding:34px;
+  border:1px solid rgba(17,17,17,.08);
+}
+
+.reviews p{
+  color:#3d2a20;
+  line-height:1.8;
+  margin-bottom:24px;
+}
+
+.delivery{
+  padding:70px 6%;
+  background:
+    linear-gradient(90deg, rgba(17,17,17,.95), rgba(17,17,17,.7)),
+    url("https://receitas.wap.ind.br/wp-content/uploads/2024/03/Receita-de-hamburguer-na-air-fryer-1080x640.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+
+.delivery img{
+  width:92px;
+  margin-bottom:20px;
+}
+
+.delivery h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:56px;
+  line-height:.9;
+  max-width:700px;
+}
+
+.delivery p{
+  color:rgba(255,255,255,.75);
+  margin-top:14px;
+}
+
+.delivery a{
+  background:var(--mostarda);
+  color:var(--preto);
+}
+
+.contato{
+  padding:90px 6%;
+  background:#0B0B0B;
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+
+.contato h2{
+  font-family:'Mocha Choco', sans-serif;
+  font-size:clamp(40px, 6vw, 72px);
+  line-height:7%;
+  margin:18px 0;
+}
+
+.contato p{
+  color:rgba(255,255,255,.74);
+  line-height:1.8;
+}
+
+.mapa{
+  min-height:260px;
+  border-radius:28px;
+  background:
+    linear-gradient(rgba(17,17,17,.55), rgba(17,17,17,.55)),
+    url("assets/textura-preta.jpg");
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(216,154,54,.25);
+}
+
+.mapa p{
+  color:var(--mostarda);
+  font-weight:900;
+}
+
+.footer{
+  padding:70px 6%;
+  background:#070707;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer img{
+  width:96px;
+}
+
+.footer h4{
+  color:var(--mostarda);
+  margin-bottom:18px;
+   text-align: left;
+}
+
+.footer a,
+.footer p{
+  display:block;
+  color:rgba(255,255,255,.72);
+  margin-bottom:10px;
+  text-align: left;
+}
+
+.whatsapp{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:999;
+  background:#25D366;
+  color:white;
+  padding:15px 24px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:0 18px 40px rgba(0,0,0,.28);
+}
+
+@media(max-width:1050px){
+  .menu,
+  .btn-header{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .menu.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:92px;
+    left:6%;
+    right:6%;
+    padding:28px;
+    background:var(--preto);
+    border-radius:24px;
+  }
+
+  .features,
+  .promocoes,
+  .cards,
+  .sobre,
+  .reviews,
+  .contato,
+  .footer{
+    grid-template-columns:1fr;
+  }
+
+  .delivery{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:650px){
+  .slide-content h1{
+    font-size:56px;
+  }
+
+  .hero-logo{
+    width:92px;
+  }
+
+  .arrow{
+    display:none;
+  }
+
+  .features,
+  .promocoes,
+  .cardapio,
+  .combo-banner,
+  .sobre,
+  .depoimentos,
+  .contato{
+    padding:76px 6%;
+  }
+
+  .cupom-card h2{
+    font-size:62px;
+  }
+
+  .promo-combo h2,
+  .delivery h2{
+    font-size:48px;
+  }
+
+  .card img,
+  .sobre-img img{
+    height:360px;
+  }
+}
