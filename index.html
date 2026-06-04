@@ -1,20 +1,306 @@
-<!DOCTYPE hmtl> 
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Or Estética Avançada | Clínica premium em São Paulo</title>
+  <meta name="description" content="Maison Or Estética Avançada em Pinheiros, São Paulo: preenchimento labial, extensão de cílios, skincare avançado e protocolos faciais com resultado natural.">
+  <meta name="theme-color" content="#2b1d15">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Estética avançada com atendimento personalizado</span>
+      <span class="separator"></span>
+      <span>Pinheiros • São Paulo</span>
+      <span class="separator desktop-only"></span>
+      <span class="desktop-only" data-hours></span>
+    </div>
+  </div>
 
-<html>
-     <head>
-        <title>
-           Página da Duda
-        </title>
-     </head>
-    <body>
-         <h1>
-                 Bem-Vindo ao meu site !!!!!!!
-         </h1>
-         <p>
-        Este é um parágrafo de texto super legal!
-         </p>
-         <a href="https://www.techguiado.com.br">Este é um link para o site </a>
-         <img src="imagens/greys 348x348.png">
-      </body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Maison Or Estética - início">
+        <img src="assets/brand/logo.svg" alt="Maison Or Estética Avançada">
+      </a>
+      <button class="mobile-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-mobile-toggle>
+        <span></span>
+      </button>
+      <div class="nav-links" data-mobile-menu>
+        <a href="#inicio">Início</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#metodo">Método</a>
+        <a href="#clinica">A clínica</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a class="button gold desktop-cta" data-whatsapp data-message="Olá! Vim pelo site e gostaria de agendar uma avaliação na Maison Or Estética.">Agendar avaliação</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-label="Apresentação da clínica">
+      <div class="hero-slider" data-slider>
+        <article class="hero-slide active">
+          <img class="hero-media hero-lips" src="assets/images/preenchimento-labial.webp" alt="Procedimento estético de preenchimento labial realizado por profissional">
+          <div class="hero-overlay"></div>
+          <div class="container hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow light">Estética avançada em São Paulo</p>
+              <h1>Realce sua beleza<br><span class="script">com elegância.</span></h1>
+              <p class="lead">Preenchimento labial, tratamentos faciais e cuidados para o olhar com avaliação individual e resultados sutis.</p>
+              <div class="hero-actions">
+                <a class="button gold" data-whatsapp data-message="Olá! Gostaria de agendar uma avaliação estética.">Agendar avaliação</a>
+                <a class="button outline" href="#tratamentos">Ver tratamentos</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <img class="hero-media hero-black-model" src="assets/images/hero-modelo-negra.webp" alt="Mulher negra com pele luminosa em retrato editorial de beleza">
+          <div class="hero-overlay"></div>
+          <div class="container hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow light">Beleza natural e sofisticada</p>
+              <h1>Pele com viço,<br><span class="script">presença</span> e leveza.</h1>
+              <p class="lead">Protocolos planejados para valorizar seus traços sem apagar a sua identidade.</p>
+              <div class="hero-actions">
+                <a class="button gold" href="#metodo">Conheça o método</a>
+                <a class="button outline" data-whatsapp data-message="Olá! Quero saber qual procedimento combina comigo.">Falar com a clínica</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="hero-slide">
+          <img class="hero-media hero-space" src="assets/images/recepcao-real.webp" alt="Ambiente elegante de recepção para atendimento estético">
+          <div class="hero-overlay"></div>
+          <div class="container hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow light">Experiência Maison Or</p>
+              <h1>Um espaço pensado<br><span class="script">nos detalhes.</span></h1>
+              <p class="lead">Atendimento reservado em Pinheiros, com conforto, sofisticação e cuidado do início ao pós-procedimento.</p>
+              <div class="hero-actions">
+                <a class="button gold" href="#clinica">Ver a clínica</a>
+                <a class="button outline" href="#contato">Entrar em contato</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="container hero-controls">
+        <div class="hero-dots" data-dots aria-label="Selecionar destaque"></div>
+        <div class="hero-arrows">
+          <button type="button" data-prev aria-label="Destaque anterior">←</button>
+          <button type="button" data-next aria-label="Próximo destaque">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section-small" aria-label="Benefícios da experiência">
+      <div class="container benefit-grid">
+        <article><span>01</span><strong>Avaliação individual</strong><p>Indicação baseada no que faz sentido para seu objetivo.</p></article>
+        <article><span>02</span><strong>Resultado natural</strong><p>Refinamento e harmonia sem aparência exagerada.</p></article>
+        <article><span>03</span><strong>Protocolos seguros</strong><p>Procedimentos realizados após orientação profissional.</p></article>
+        <article><span>04</span><strong>Ambiente reservado</strong><p>Experiência confortável, acolhedora e sofisticada.</p></article>
+      </div>
+    </section>
+
+    <section class="treatments section" id="tratamentos">
+      <div class="container">
+        <div class="title-block centered">
+          <p class="eyebrow">Tratamentos</p>
+          <h2>Procedimentos que valorizam<br><span class="script dark-script">sua melhor versão.</span></h2>
+          <p>Uma seleção de tratamentos faciais e do olhar para resultados delicados, bem orientados e coerentes com você.</p>
+        </div>
+
+        <div class="photo-treatments">
+          <article class="photo-card">
+            <img src="assets/images/preenchimento-labial.webp" alt="Preenchimento labial">
+            <div>
+              <h3>Preenchimento Labial</h3>
+              <p>Contorno, hidratação e volume com proposta natural.</p>
+              <button type="button" data-select="Preenchimento Labial">Tenho interesse</button>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/extensao-cilios.webp" alt="Aplicação de extensão de cílios">
+            <div>
+              <h3>Extensão de Cílios</h3>
+              <p>Desenho personalizado para abrir e valorizar o olhar.</p>
+              <button type="button" data-select="Extensão de Cílios">Tenho interesse</button>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/limpeza-pele-mulher-negra.webp" alt="Mulher negra recebendo tratamento facial em clínica">
+            <div>
+              <h3>Skincare Profissional</h3>
+              <p>Limpeza e renovação para pele mais viçosa e equilibrada.</p>
+              <button type="button" data-select="Skincare Profissional">Tenho interesse</button>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="assets/images/avaliacao-facial.webp" alt="Avaliação facial realizada por profissional">
+            <div>
+              <h3>Avaliação Facial</h3>
+              <p>O primeiro passo para escolher seu protocolo com segurança.</p>
+              <button type="button" data-select="Avaliação Facial">Tenho interesse</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="treatment-list">
+          <article><h3>Harmonização Facial</h3><p>Planejamento para equilíbrio facial e suavização de pontos específicos.</p><button type="button" data-select="Harmonização Facial">Tenho interesse</button></article>
+          <article><h3>Design de Sobrancelhas</h3><p>Formato e acabamento que respeitam suas características naturais.</p><button type="button" data-select="Design de Sobrancelhas">Tenho interesse</button></article>
+          <article><h3>Peeling &amp; Glow</h3><p>Renovação e luminosidade para peles com textura ou opacidade.</p><button type="button" data-select="Peeling & Glow">Tenho interesse</button></article>
+          <article><h3>Drenagem Facial</h3><p>Toque técnico para reduzir inchaço e promover sensação de leveza.</p><button type="button" data-select="Drenagem Facial">Tenho interesse</button></article>
+        </div>
+        <p class="medical-note">Procedimentos injetáveis dependem de avaliação presencial e indicação por profissional habilitado.</p>
+      </div>
+    </section>
+
+    <section class="method section" id="metodo">
+      <div class="container method-panel">
+        <div class="method-heading">
+          <p class="eyebrow light">Nosso método</p>
+          <h2>Luxo é ser bem atendida,<br>com critério e naturalidade.</h2>
+        </div>
+        <div class="method-steps">
+          <article><strong>01</strong><h3>Escuta e avaliação</h3><p>Entendemos sua intenção antes de sugerir qualquer procedimento.</p></article>
+          <article><strong>02</strong><h3>Plano personalizado</h3><p>Você recebe uma indicação clara, proporcional e sem excessos.</p></article>
+          <article><strong>03</strong><h3>Cuidado contínuo</h3><p>Acompanhamento e orientação para manter conforto e resultado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="clinic section" id="clinica">
+      <div class="container clinic-grid">
+        <div class="clinic-gallery">
+          <figure class="large"><img src="assets/images/recepcao-real.webp" alt="Recepção elegante para atendimento estético"></figure>
+          <figure><img src="assets/images/hero-modelo-negra.webp" alt="Retrato de beleza com pele iluminada"></figure>
+          <figure><img src="assets/images/avaliacao-facial.webp" alt="Atendimento facial profissional"></figure>
+        </div>
+        <div class="clinic-copy">
+          <p class="eyebrow">A clínica</p>
+          <h2>Beleza, acolhimento<br>e excelência em São Paulo.</h2>
+          <p>Localizada em Pinheiros, a Maison Or foi pensada para clientes que valorizam estética sofisticada, atendimento sem pressa e uma experiência reservada.</p>
+          <p>Do ambiente ao acompanhamento, cada detalhe reforça uma proposta contemporânea: cuidar com técnica, bom gosto e respeito ao que torna cada pessoa única.</p>
+          <div class="clinic-info">
+            <div><span>Localização</span><strong><a data-map-link target="_blank" rel="noopener">Pinheiros • São Paulo/SP</a></strong></div>
+            <div><span>Atendimento</span><strong data-hours></strong></div>
+          </div>
+          <a class="button brown" data-whatsapp data-message="Olá! Gostaria de consultar horários para avaliação na Maison Or.">Consultar agenda</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="duvidas">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2>Informação também<br>é parte do cuidado.</h2>
+          <p>As respostas abaixo ajudam no primeiro contato. Na avaliação, cada orientação é personalizada.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <details open>
+            <summary>Como sei qual procedimento é indicado para mim?</summary>
+            <p>O primeiro passo é a avaliação. Nela, entendemos sua expectativa e analisamos qual abordagem faz sentido para um resultado natural.</p>
+          </details>
+          <details>
+            <summary>Preenchimento labial exige avaliação?</summary>
+            <p>Sim. Procedimentos injetáveis só são indicados após avaliação individual, histórico e orientação do profissional habilitado.</p>
+          </details>
+          <details>
+            <summary>A clínica atende com hora marcada?</summary>
+            <p>Sim. O atendimento é feito mediante agendamento para preservar privacidade, organização e qualidade da experiência.</p>
+          </details>
+          <details>
+            <summary>Posso agendar pelo WhatsApp?</summary>
+            <p>Sim. Envie sua mensagem, informe o tratamento de interesse e a equipe retornará com disponibilidade.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Agende sua avaliação</p>
+          <h2>Descubra o tratamento certo para valorizar sua beleza.</h2>
+          <p>Envie seus dados e sua preferência de atendimento. A mensagem será encaminhada para o WhatsApp da clínica.</p>
+          <div class="contact-meta">
+            <div><span>Atendimento</span><strong data-hours></strong></div>
+            <div><span>Localização</span><strong><a data-map-link target="_blank" rel="noopener">Pinheiros • São Paulo/SP</a></strong></div>
+            <div><span>Contato</span><strong>Agendamento via WhatsApp</strong></div>
+          </div>
+        </div>
+        <form class="contact-form" data-form>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input id="name" name="nome" type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="field">
+            <label for="phone">WhatsApp</label>
+            <input id="phone" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+          </div>
+          <div class="field full">
+            <label for="procedure">Tratamento de interesse</label>
+            <select id="procedure" name="procedimento" required>
+              <option value="">Selecione um tratamento</option>
+              <option>Preenchimento Labial</option>
+              <option>Extensão de Cílios</option>
+              <option>Skincare Profissional</option>
+              <option>Harmonização Facial</option>
+              <option>Design de Sobrancelhas</option>
+              <option>Peeling &amp; Glow</option>
+              <option>Drenagem Facial</option>
+              <option>Avaliação Facial</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Observações</label>
+            <textarea id="message" name="mensagem" placeholder="Conte brevemente o que você deseja melhorar ou agendar."></textarea>
+          </div>
+          <button class="button gold full" type="submit">Solicitar avaliação</button>
+          <p class="form-disclaimer">O envio não confirma o horário. A equipe retornará para alinhamento e disponibilidade.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/brand/logo-footer.svg" alt="Maison Or Estética">
+        <p>Estética avançada com proposta natural, elegante e personalizada em São Paulo.</p>
+      </div>
+      <div>
+        <h3>Tratamentos</h3>
+        <a href="#tratamentos">Preenchimento Labial</a>
+        <a href="#tratamentos">Extensão de Cílios</a>
+        <a href="#tratamentos">Skincare Profissional</a>
+        <a href="#tratamentos">Harmonização Facial</a>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p><a data-map-link target="_blank" rel="noopener">Pinheiros • São Paulo/SP</a><br><span data-hours></span></p>
+        <a data-whatsapp data-message="Olá! Quero agendar uma avaliação.">Falar no WhatsApp</a>
+      </div>
+      <div>
+        <h3>Informações</h3>
+        <a href="#metodo">Nossa abordagem</a>
+        <a href="#duvidas">Dúvidas frequentes</a>
+        <a href="#contato">Agendar avaliação</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 Maison Or Estética Avançada. Todos os direitos reservados.</div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
 </html>
-
