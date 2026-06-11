@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff5f7, #ffe3eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* coração gigante ao fundo */
+body::before {
+    content: "❤";
+    position: absolute;
+    font-size: 500px;
+    color: rgba(255, 77, 136, 0.08);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.08);
+}
+
+h1 {
+    color: #7d1d4e;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100px;
+}
+
+button {
+    border: none;
+    border-radius: 999px;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#sim {
+    background: #7d1d4e;
+    color: white;
+}
+
+#sim:hover {
+    transform: scale(1.05);
+}
+
+#nao {
+    background: transparent;
+    color: #7d1d4e;
+    border: 2px solid #7d1d4e;
+}
+
+#mensagem {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7d1d4e;
+}
