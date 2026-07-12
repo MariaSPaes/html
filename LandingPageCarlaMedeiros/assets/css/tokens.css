@@ -1,0 +1,13 @@
+/* Design tokens */
+:root {
+  --wine: #3A0414;
+  --cream: #FFECCE;
+  --rose: #C09988;
+
+  --font-title: "Cormorant Garamond", serif;
+  --font-text: "Poppins", sans-serif;
+
+  --header-height: 78px;
+  --container: 1180px;
+  --section-space: clamp(88px, 9vw, 138px);
+}

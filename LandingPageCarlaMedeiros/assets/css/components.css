@@ -1,0 +1,133 @@
+/* Reusable components */
+.eyebrow {
+  margin-bottom: 18px;
+  color: var(--wine);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.eyebrow-light {
+  color: var(--rose);
+}
+
+.button {
+  min-height: 52px;
+  padding: 14px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.button-light {
+  background: var(--cream);
+  color: var(--wine);
+}
+
+/* Aba triangular: apenas um recorte entre as seções */
+.section-tab {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  z-index: 20;
+  width: 60px;
+  height: 30px;
+  background: var(--wine);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.section-tab-method {
+  background: var(--cream);
+}
+
+.patterned-section {
+  background-image: url("../images/pattern-rose.png");
+  background-repeat: no-repeat;
+  background-size: 720px auto;
+  background-position: calc(100% + 220px) center;
+}
+
+.phrase-band {
+  overflow: hidden;
+  background: var(--wine);
+  color: var(--cream);
+}
+
+.phrase-band-inner {
+  min-width: max-content;
+  padding: 19px 30px;
+  display: flex;
+  justify-content: center;
+  gap: clamp(54px, 6vw, 112px);
+  white-space: nowrap;
+}
+
+.phrase-band span {
+  font-size: clamp(0.76rem, 1vw, 0.98rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wave-divider {
+  height: clamp(58px, 6vw, 88px);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wave-to-wine {
+  background: var(--cream);
+}
+
+.wave-to-wine path {
+  fill: var(--wine);
+}
+
+.wave-to-cream {
+  background: var(--cream);
+}
+
+.wave-to-cream path {
+  fill: var(--cream);
+}
+
+.wave-to-rose {
+  background: var(--cream);
+}
+
+.wave-to-rose path {
+  fill: var(--rose);
+}
+
+.whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 80;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--wine);
+  color: var(--cream);
+  opacity: 0.78;
+}
+
+.whatsapp span {
+  font-size: 0.68rem;
+  font-weight: 600;
+}
