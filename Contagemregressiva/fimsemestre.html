@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fim do Semestre - Desenvolvimento de Sistemas</title>
+
+    <link rel="stylesheet" href="fimsemestre.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tag">
+                    &lt; Técnico em Desenvolvimento de Sistemas /&gt;
+                </p>
+
+                <h1>
+                    Contagem regressiva para o
+                    <span>fim do semestre</span>
+                </h1>
+
+                <p class="subtitle">
+                    Depois de códigos, projetos, trabalhos e alguns bugs,
+                    estamos chegando aos últimos commits dessa jornada.
+                </p>
+
+                <div class="countdown">
+
+                    <div class="time-box">
+                        <span class="number" id="meses">00</span>
+                        <span class="label">Meses</span>
+                    </div>
+
+                    <div class="time-box">
+                        <span class="number" id="dias">00</span>
+                        <span class="label">Dias</span>
+                    </div>
+
+                    <div class="time-box">
+                        <span class="number" id="horas">00</span>
+                        <span class="label">Horas</span>
+                    </div>
+
+                    <div class="time-box">
+                        <span class="number" id="minutos">00</span>
+                        <span class="label">Minutos</span>
+                    </div>
+
+                    <div class="time-box">
+                        <span class="number" id="segundos">00</span>
+                        <span class="label">Segundos</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="memorias">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    // nossa turma
+                </p>
+
+                <h2>
+                    Nossa jornada até aqui
+                </h2>
+
+                <p>
+                    Alguns registros dos semestres, projetos,
+                    confraternizações e momentos que marcaram nossa turma ❤️.
+                </p>
+
+            </div>
+
+
+            <div class="carousel">
+
+                <div class="carousel-track">
+
+                    <div class="slide active">
+                        <img src="img/imagem1.jpeg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem2.jpeg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem3.jpg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem4.jpg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem5.jpg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem6.jpg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem7.jpg" alt="Foto da turma">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/imagem8.jpg" alt="Foto da turma">
+                    </div>
+
+                </div>
+
+                <button
+                    class="carousel-btn prev"
+                    aria-label="Foto anterior"
+                >
+                    &#10094;
+                </button>
+
+                <button
+                    class="carousel-btn next"
+                    aria-label="Próxima foto"
+                >
+                    &#10095;
+                </button>
+
+                <div class="carousel-counter">
+                    <span id="currentSlide">01</span>
+                    <span>/</span>
+                    <span>08</span>
+                </div>
+
+            </div>
+
+            <div class="carousel-dots"></div>
+
+        </section>
+
+
+        <section class="final-message">
+
+            <div class="final-card">
+
+                <span class="final-icon">
+                    &lt;/&gt;
+                </span>
+
+                <h2>
+                    Último semestre carregando...
+                </h2>
+
+                <p>
+                    Foram muitos trabalhos, códigos, erros,
+                    correções e aprendizados maravilhosos, que com toda
+                    certeza levarei para a próxima etapa da minha vida.
+                    Agora falta cada vez menos para concluirmos.
+                    Obrigada prof Juliana e prof Washington, todas as aulas
+                    foram excepcionais, sentirei saudades!!
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Técnico em Desenvolvimento de Sistemas
+            <span>•</span>
+            Com muito carinho, Maria Paes
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        /* CONTAGEM REGRESSIVA */
+
+        function contarDias() {
+
+            let hoje = new Date()
+
+            let fimsemestre = new Date(2026, 10, 27)
+
+            // Calcular a diferença
+            let diferenca = fimsemestre - hoje
+
+            // Converter os valores
+
+            let meses = Math.floor(
+                diferenca / 1000 / 60 / 60 / 24 / 30
+            )
+
+            let dias = Math.floor(
+                diferenca / 1000 / 60 / 60 / 24
+            ) % 30
+
+            let horas = Math.floor(
+                diferenca / 1000 / 60 / 60
+            ) % 24
+
+            let minutos = Math.floor(
+                diferenca / 1000 / 60
+            ) % 60
+
+            let segundos = Math.floor(
+                diferenca / 1000
+            ) % 60
+
+
+            document.getElementById("meses").innerText = meses
+
+            document.getElementById("dias").innerText = dias
+
+            document.getElementById("horas").innerText = horas
+
+            document.getElementById("minutos").innerText = minutos
+
+            document.getElementById("segundos").innerText = segundos
+        }
+
+
+        contarDias()
+
+        setInterval(contarDias, 1000)
+
+
+
+        /* CARROSSEL */
+
+        const slides =
+            document.querySelectorAll(".slide")
+
+        const dotsContainer =
+            document.querySelector(".carousel-dots")
+
+        const prevButton =
+            document.querySelector(".prev")
+
+        const nextButton =
+            document.querySelector(".next")
+
+        const currentSlideText =
+            document.querySelector("#currentSlide")
+
+
+        let currentSlide = 0
+
+        let autoplay
+
+
+        slides.forEach((_, index) => {
+
+            const dot =
+                document.createElement("button")
+
+            dot.classList.add("dot")
+
+
+            if (index === 0) {
+
+                dot.classList.add("active")
+
+            }
+
+
+            dot.addEventListener("click", () => {
+
+                showSlide(index)
+
+                restartAutoplay()
+
+            })
+
+
+            dotsContainer.appendChild(dot)
+
+        })
+
+
+        const dots =
+            document.querySelectorAll(".dot")
+
+
+        function showSlide(index) {
+
+            slides[currentSlide]
+                .classList.remove("active")
+
+            dots[currentSlide]
+                .classList.remove("active")
+
+
+            currentSlide = index
+
+
+            if (currentSlide >= slides.length) {
+
+                currentSlide = 0
+
+            }
+
+
+            if (currentSlide < 0) {
+
+                currentSlide =
+                    slides.length - 1
+
+            }
+
+
+            slides[currentSlide]
+                .classList.add("active")
+
+            dots[currentSlide]
+                .classList.add("active")
+
+
+            currentSlideText.textContent =
+                String(currentSlide + 1)
+                    .padStart(2, "0")
+
+        }
+
+
+        function nextSlide() {
+
+            showSlide(currentSlide + 1)
+
+        }
+
+
+        function prevSlide() {
+
+            showSlide(currentSlide - 1)
+
+        }
+
+
+        function startAutoplay() {
+
+            autoplay =
+                setInterval(() => {
+
+                    nextSlide()
+
+                }, 4000)
+
+        }
+
+
+        function restartAutoplay() {
+
+            clearInterval(autoplay)
+
+            startAutoplay()
+
+        }
+
+
+        nextButton.addEventListener("click", () => {
+
+            nextSlide()
+
+            restartAutoplay()
+
+        })
+
+
+        prevButton.addEventListener("click", () => {
+
+            prevSlide()
+
+            restartAutoplay()
+
+        })
+
+
+        startAutoplay()
+
+    </script>
+
+</body>
+
+</html>
