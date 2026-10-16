@@ -1,0 +1,224 @@
+:root {
+	color-scheme: light;
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	--forest: #123b2b;
+	--forest-deep: #0a251c;
+	--leaf: #91c95b;
+	--lime: #d5f37b;
+	--ink: #18372a;
+	--muted: #718176;
+	--paper: #f4f5e9;
+	--line: #d9e1d3;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+	background-color: var(--forest-deep);
+	background-image:
+		linear-gradient(135deg, transparent 48%, rgb(145 201 91 / 7%) 48.2%, transparent 48.8%),
+		linear-gradient(45deg, transparent 72%, rgb(145 201 91 / 5%) 72.2%, transparent 72.8%),
+		repeating-linear-gradient(0deg, transparent 0 43px, rgb(255 255 255 / 2.5%) 44px);
+}
+
+body {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 22px;
+	width: min(100% - 36px, 540px);
+	margin: clamp(24px, 8vh, 84px) auto;
+	padding: clamp(28px, 6vw, 52px);
+	overflow: hidden;
+	color: var(--ink);
+	background: var(--paper);
+	border: 1px solid rgb(255 255 255 / 28%);
+	border-radius: 7px;
+	box-shadow: 0 28px 90px rgb(0 0 0 / 28%);
+}
+
+body::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 7px;
+	background: linear-gradient(90deg, var(--forest) 0 62%, var(--leaf) 62% 84%, var(--lime) 84%);
+	content: "";
+}
+
+h1 {
+	margin: 2px 0 4px;
+	color: var(--forest);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(2.25rem, 8vw, 3.35rem);
+	font-weight: 500;
+	line-height: 1.02;
+	letter-spacing: 0;
+}
+
+
+body > label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 15px 0 17px;
+	border-top: 1px solid var(--line);
+	color: #43584a;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+input[type="number"] {
+	width: 84px;
+	min-height: 44px;
+	padding: 0 12px;
+	color: var(--forest);
+	background: #fffef8;
+	border: 1px solid #cbd8c5;
+	border-radius: 4px;
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+}
+
+body > div {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 9px;
+}
+
+body > div label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 50px;
+	padding: 10px 12px;
+	color: #3d5546;
+	background: #e9eee2;
+	border: 1px solid #e0e7d9;
+	border-radius: 4px;
+	font-size: 0.82rem;
+	transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+body > div label:has(input:checked) {
+	background: #e4edda;
+	border-color: #c4d7b6;
+}
+
+input[type="checkbox"] {
+	width: 17px;
+	height: 17px;
+	flex: 0 0 auto;
+	margin: 0;
+	accent-color: #39734a;
+}
+
+button {
+	min-height: 48px;
+	padding: 0 18px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	font: inherit;
+	font-size: 0.9rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+button:hover {
+	transform: translateY(-1px);
+}
+
+button:active {
+	transform: translateY(0);
+}
+
+#gerar {
+	color: #f7f8ee;
+	background: var(--forest);
+	box-shadow: 0 5px 0 #d3ddca;
+}
+
+#gerar:hover {
+	background: #20553b;
+	box-shadow: 0 7px 0 #d3ddca;
+}
+
+#resultado {
+	display: flex;
+	align-items: center;
+	min-height: 66px;
+	margin: 0;
+	padding: 15px 17px;
+	overflow-wrap: anywhere;
+	color: var(--lime);
+	background: #102e22;
+	border-left: 4px solid var(--leaf);
+	border-radius: 3px;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 1.05rem;
+	letter-spacing: 0.035em;
+}
+
+#resultado:empty::before {
+	color: #91a99a;
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-size: 0.82rem;
+	letter-spacing: 0;
+	content: "Sua senha aparecerá aqui";
+}
+
+#copiar {
+	justify-self: start;
+	min-height: 40px;
+	padding: 0 13px;
+	color: var(--forest);
+	background: transparent;
+	border-color: #aebfa9;
+	font-size: 0.82rem;
+}
+
+#copiar:hover {
+	background: #e5ecdf;
+}
+
+:focus-visible {
+	outline: 3px solid #79aa55;
+	outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+	body {
+		gap: 18px;
+		width: min(100% - 24px, 540px);
+		margin: 22px auto;
+		padding: 31px 22px;
+	}
+
+	body > div {
+		grid-template-columns: 1fr;
+		gap: 7px;
+	}
+
+	body > div label {
+		min-height: 44px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
