@@ -1,0 +1,44 @@
+/* Hierarquia final: organização limpa, duas linhas e paleta da identidade */
+:root{--pink:#f29cbd;--yellow:#fcc261;--hot:#ea4c75;--orange:#ef7853;--cream:#fde9e6;--ink:#3d3d42}
+.hero{height:clamp(460px,62vh,620px);min-height:0;aspect-ratio:auto;overflow:hidden}
+.hero-banner{width:100%;height:100%;object-fit:cover;object-position:center 43%}
+.section-number{font-size:11px;letter-spacing:.16em}
+.script{font-size:clamp(25px,2.4vw,38px)}
+.about h2,.projects h2,.skills h2,.experience h2,.contact h2{max-width:980px;font-size:clamp(58px,6vw,96px);line-height:.94}
+.about{background:var(--cream)}
+.word-carousel-pink{background:var(--hot);color:var(--cream)}
+.projects{background:var(--cream);color:var(--ink)}
+.projects .section-number{border-color:rgba(234,76,117,.22)}
+.projects-heading h2{color:var(--ink);-webkit-text-stroke:0;text-shadow:none}
+.projects-heading h2 span{color:var(--hot)}
+.project-filters button{background:transparent;color:var(--ink);border-color:rgba(234,76,117,.55)}
+.project-filters button:hover,.project-filters button.active{background:var(--pink);border-color:var(--ink);box-shadow:3px 3px 0 var(--hot)}
+.project-grid .project-info span{color:var(--hot)}
+.project-grid .project-image{box-shadow:7px 7px 0 var(--pink)!important}
+.project-grid .project-card:nth-child(even) .project-image{box-shadow:7px 7px 0 var(--yellow)!important}
+.project-carousel-controls button{background:var(--cream)}
+.skills{background:var(--yellow)}
+.experience{background:var(--cream)}
+.experience h2 span{color:var(--hot)}
+.contact{padding-top:110px;padding-bottom:110px;background:var(--pink)}
+.contact .script{color:var(--cream)}
+.contact h2{margin-inline:auto;color:var(--cream)}
+.contact h2 span,.contact .bubble-word{color:var(--cream)!important;-webkit-text-stroke:0;text-shadow:none;font-size:1em}
+.contact>p:not(.script){font-size:15px;line-height:1.7;color:var(--cream)}
+.contact .button-dark{background:var(--cream);color:var(--hot);box-shadow:6px 6px 0 var(--yellow)}
+.contact-links a{color:var(--cream)}
+.contact-links{margin-top:50px}
+.site-footer{display:block;background:var(--ink);color:var(--cream);padding:0 clamp(28px,6vw,90px);font-size:14px;text-transform:none;letter-spacing:0}
+.footer-main{display:grid;grid-template-columns:1.5fr .55fr .65fr;gap:9vw;padding:72px 0 62px}
+.footer-intro{max-width:480px}
+.footer-name{font-family:var(--serif);font-size:clamp(38px,4vw,60px);line-height:1;margin:0 0 24px;color:var(--cream)}
+.footer-name span{color:var(--yellow);font-family:var(--sans);font-size:.45em;margin-left:5px}
+.footer-intro>p:last-child{font-size:15px;line-height:1.75;color:rgba(253,233,230,.7)}
+.footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.footer-column h3{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--yellow);margin:8px 0 12px}
+.footer-column a{color:rgba(253,233,230,.76);text-decoration:none;font-size:14px;transition:.2s}
+.footer-column a:hover{color:var(--pink);transform:translateX(3px)}
+.footer-bottom{border-top:1px solid rgba(253,233,230,.16);padding:22px 0 26px;display:flex;align-items:center;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:rgba(253,233,230,.6)}
+.footer-bottom p{margin:0}.footer-bottom a{color:var(--cream);text-underline-offset:4px}
+@media(max-width:900px){.hero{height:520px}.hero-banner{object-position:34% center}.projects-heading{grid-template-columns:1fr}.footer-main{grid-template-columns:1.3fr .7fr .7fr;gap:5vw}.about h2,.projects h2,.skills h2,.experience h2,.contact h2{font-size:clamp(54px,9vw,78px)}}
+@media(max-width:620px){.hero{height:440px}.hero-banner{object-position:29% center}.section-number{font-size:10px}.about h2,.projects h2,.skills h2,.experience h2,.contact h2{font-size:clamp(48px,14vw,64px);line-height:.96}.projects-heading h2 br,.skills h2 br,.experience h2 br,.contact h2 br{display:block}.contact{padding-top:80px;padding-bottom:80px}.contact-links{gap:16px;margin-top:42px}.footer-main{grid-template-columns:1fr 1fr;gap:45px 28px;padding:55px 0}.footer-intro{grid-column:1/-1}.footer-bottom{align-items:flex-start;flex-direction:column;gap:10px}.footer-name{font-size:46px}}
